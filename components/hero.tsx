@@ -11,8 +11,8 @@ export function Hero() {
 
   return (
     <section className="pt-32 pb-24 px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Left Content */}
           <div
             className={`space-y-8 transition-all duration-1000 ${
@@ -42,12 +42,12 @@ export function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <button className="px-6 py-3 bg-foreground text-background font-medium rounded-full hover:shadow-md hover:opacity-90 transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6 w-full sm:w-auto">
+              <button className="px-6 py-3 bg-foreground text-background font-medium rounded-full hover:shadow-md hover:opacity-90 transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm h-12 sm:h-auto">
                 Start Your Project
                 <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
               </button>
-              <button className="px-6 py-3 text-foreground font-medium hover:underline transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm">
+              <button className="px-6 py-3 text-foreground font-medium hover:underline transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm h-12 sm:h-auto">
                 View Our Work
                 <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
               </button>
@@ -56,14 +56,14 @@ export function Hero() {
 
           {/* Right Visual */}
           <div
-            className={`relative h-96 lg:h-full min-h-[500px] transition-all duration-1000 delay-300 flex items-center justify-center ${
+            className={`relative w-full h-80 sm:h-96 lg:h-full lg:min-h-[500px] transition-all duration-1000 delay-300 flex items-center justify-center ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
             <img 
-              src="/hero-mockup.jpg" 
-              alt="Premium web design mockup on laptop" 
-              className="w-full h-full object-cover rounded-lg border border-border shadow-2xl"
+              src="/hero-lumora-display.jpg" 
+              alt="Lumora Triad branded interface on premium laptop display" 
+              className="w-full h-full object-cover rounded-lg border border-border shadow-2xl hover:shadow-xl transition-shadow duration-300"
             />
           </div>
         </div>

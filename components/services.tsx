@@ -68,13 +68,13 @@ export function Services() {
             </span>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 mb-20">
-            <h2 className="text-6xl lg:text-7xl font-bold text-balance">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 sm:gap-8 mb-20">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-balance">
               Services we provide
             </h2>
             <Link 
               href="/services/impact"
-              className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200 whitespace-nowrap"
+              className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200 whitespace-nowrap text-sm sm:text-base"
             >
               See impact & stats
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
@@ -82,19 +82,19 @@ export function Services() {
           </div>
 
           {/* Services Grid - Alternating Layout */}
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center transition-all duration-1000 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
               >
                 {/* Content - alternates position on desktop */}
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <h3 className="text-4xl lg:text-5xl font-bold mb-6">{service.title}</h3>
-                  <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6">{service.title}</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed mb-6 sm:mb-8">
                     {service.description}
                   </p>
                   <Link 
@@ -108,7 +108,7 @@ export function Services() {
 
                 {/* Image - alternates position on desktop */}
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="relative h-80 lg:h-96 rounded-lg overflow-hidden border border-border group">
+                  <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden border border-border group">
                     <img 
                       src={service.image} 
                       alt={service.title} 

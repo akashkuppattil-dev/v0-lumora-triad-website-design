@@ -21,15 +21,15 @@ export function Navbar() {
         ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm' 
         : 'bg-background/50 backdrop-blur-none border-b border-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="text-xl sm:text-2xl font-bold tracking-tight hover:opacity-70 transition-opacity">
+          <Link href="/" className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight hover:opacity-70 transition-opacity flex-shrink-0">
             Lumora<span className="font-light">.Triad</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8 lg:gap-12">
+          <div className="hidden md:flex gap-6 lg:gap-8">
             <Link
               href="/work"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
