@@ -1,27 +1,32 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 const SERVICES = [
   {
     title: 'Web Development',
     description: 'React, Next.js, and Django backends built for scale, performance, and maintainability.',
-    image: '/service-web-dev.jpg'
+    image: '/service-web-dev.jpg',
+    slug: 'web-development'
   },
   {
     title: 'UI/UX Design',
     description: 'Digital products designed with precision, clarity, and a focus on user experience.',
-    image: '/service-ui-design.jpg'
+    image: '/service-ui-design.jpg',
+    slug: 'ui-design'
   },
   {
     title: 'Branding',
     description: 'Visual identity systems and brand strategies that resonate with modern audiences.',
-    image: '/service-branding.jpg'
+    image: '/service-branding.jpg',
+    slug: 'branding'
   },
   {
     title: 'Digital Strategy',
     description: 'Strategic planning and research-driven approaches to digital transformation.',
-    image: '/service-strategy.jpg'
+    image: '/service-strategy.jpg',
+    slug: 'digital-strategy'
   }
 ]
 
@@ -63,9 +68,18 @@ export function Services() {
             </span>
           </div>
 
-          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
-            Services we provide
-          </h2>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 mb-20">
+            <h2 className="text-6xl lg:text-7xl font-bold text-balance">
+              Services we provide
+            </h2>
+            <Link 
+              href="/services/impact"
+              className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200 whitespace-nowrap"
+            >
+              See impact & stats
+              <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </Link>
+          </div>
 
           {/* Services Grid - Alternating Layout */}
           <div className="space-y-24">
@@ -83,10 +97,13 @@ export function Services() {
                   <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
                     {service.description}
                   </p>
-                  <button className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200">
+                  <Link 
+                    href={`/services/${service.slug}`}
+                    className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200"
+                  >
                     Learn more
                     <span className="text-sm group-hover:translate-x-1 transition-transform duration-200">→</span>
-                  </button>
+                  </Link>
                 </div>
 
                 {/* Image - alternates position on desktop */}

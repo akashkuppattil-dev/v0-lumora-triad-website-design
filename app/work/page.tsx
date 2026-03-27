@@ -6,44 +6,50 @@ import { Footer } from '@/components/footer'
 const PROJECTS = [
   {
     id: 1,
-    title: 'Design System Platform',
-    category: 'Web Development + UI/UX',
+    title: 'FinTech Platform Redesign',
+    category: 'Web Development',
     year: '2024',
-    description: 'Comprehensive design system for enterprise teams',
-    image: '/project-1.jpg',
-    details: 'Built a scalable design system and component library for a Fortune 500 company. Increased design consistency by 85% and reduced development time by 40%.',
+    description: 'Enterprise-grade financial platform with real-time analytics',
+    image: '/case-study-fintech.jpg',
+    details: 'Transformed a legacy banking platform into a modern, secure fintech solution. Implemented real-time transaction processing and an intuitive dashboard that reduced user support tickets by 70%.',
+    challenge: 'The legacy system was slow, confusing, and losing users to competitors. Security concerns and outdated UX were critical issues.',
+    solution: 'We rebuilt the entire platform with modern tech stack, redesigned the UI/UX, and implemented bank-grade security. Result was a 45% increase in daily active users.',
     stats: [
-      { label: 'Users', value: '2000+' },
-      { label: 'Components', value: '150+' },
-      { label: 'Time saved', value: '40%' }
+      { label: 'Active Users', value: '+45%' },
+      { label: 'Support Tickets', value: '-70%' },
+      { label: 'Transaction Speed', value: '3x faster' }
     ]
   },
   {
     id: 2,
-    title: 'E-Commerce Transformation',
-    category: 'Full-Stack Development',
+    title: 'E-Commerce Platform Scale-up',
+    category: 'Web Development + UI/UX',
     year: '2024',
-    description: '300% increase in conversion rate through UX optimization',
-    image: '/project-2.jpg',
-    details: 'Complete redesign and rebuild of an e-commerce platform resulting in significant improvements in user engagement and conversion rates.',
+    description: 'Complete redesign driving 300% conversion increase',
+    image: '/case-study-ecommerce.jpg',
+    details: 'Full-stack redesign of an e-commerce platform for a luxury brand. Improved user experience at every touchpoint, resulting in remarkable growth in conversions and revenue.',
+    challenge: 'High bounce rates, abandoned carts, and outdated mobile experience were costing the client millions in lost revenue.',
+    solution: 'Comprehensive UX audit, mobile-first redesign, streamlined checkout process, and performance optimization. Every page was rebuilt with conversion in mind.',
     stats: [
-      { label: 'Conversion lift', value: '+300%' },
-      { label: 'Revenue increase', value: '+250%' },
-      { label: 'Load time', value: '60% faster' }
+      { label: 'Conversion Lift', value: '+300%' },
+      { label: 'Revenue Increase', value: '+250%' },
+      { label: 'Mobile Traffic', value: '+180%' }
     ]
   },
   {
     id: 3,
-    title: 'Brand Identity Suite',
-    category: 'Branding + Design',
-    year: '2023',
-    description: 'Complete visual identity system and brand guidelines',
-    image: '/project-3.jpg',
-    details: 'Developed comprehensive brand identity including logo, color system, typography, and brand guidelines for a growing tech startup.',
+    title: 'SaaS Dashboard Redesign',
+    category: 'UI/UX Design + Web Development',
+    year: '2024',
+    description: 'Design system overhaul for enterprise SaaS platform',
+    image: '/case-study-saas.jpg',
+    details: 'Created a comprehensive design system and rebuilt the entire dashboard for a B2B SaaS company. Standardized components improved consistency and reduced development time by 40%.',
+    challenge: 'Inconsistent design across the product, no design system, and frustrated users struggling with navigation and feature discovery.',
+    solution: 'Built complete design system with 120+ components, redesigned information architecture, and implemented new navigation. Team adoption reached 98% within first month.',
     stats: [
-      { label: 'Brand touchpoints', value: '50+' },
-      { label: 'Guidelines pages', value: '100+' },
-      { label: 'Team adoption', value: '98%' }
+      { label: 'Components', value: '120+' },
+      { label: 'Dev Time', value: '-40%' },
+      { label: 'Team Adoption', value: '98%' }
     ]
   }
 ]
@@ -55,13 +61,13 @@ export default function WorkPage() {
       
       <main className="pt-32">
         {/* Header Section */}
-        <section className="pb-24 px-6 lg:px-8 border-b border-border">
-          <div className="max-w-4xl mx-auto">
+        <section className="pb-24 px-4 sm:px-6 lg:px-8 border-b border-border">
+          <div className="max-w-6xl mx-auto">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">
-              Featured work
+              Our latest work
             </h1>
-            <p className="text-lg text-muted-foreground font-normal max-w-2xl">
-              A selection of our recent projects that showcase our approach to design, development, and strategy.
+            <p className="text-base sm:text-lg text-muted-foreground font-normal max-w-3xl leading-relaxed">
+              Selected case studies showcasing our approach to solving complex problems through design, development, and strategy. Each project demonstrates our commitment to delivering measurable results.
             </p>
           </div>
         </section>
@@ -92,11 +98,23 @@ export default function WorkPage() {
                       {project.details}
                     </p>
 
+                    {/* Challenge & Solution */}
+                    <div className="space-y-6 mb-8 p-6 bg-secondary rounded-lg border border-border">
+                      <div>
+                        <h4 className="text-sm font-semibold uppercase tracking-widest text-foreground mb-2">Challenge</h4>
+                        <p className="text-sm text-muted-foreground font-normal leading-relaxed">{project.challenge}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold uppercase tracking-widest text-foreground mb-2">Solution</h4>
+                        <p className="text-sm text-muted-foreground font-normal leading-relaxed">{project.solution}</p>
+                      </div>
+                    </div>
+
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-6 mb-8 p-6 bg-secondary rounded-lg">
+                    <div className="grid grid-cols-3 gap-4 mb-8">
                       {project.stats.map((stat) => (
-                        <div key={stat.label}>
-                          <div className="text-2xl sm:text-3xl font-semibold mb-1">{stat.value}</div>
+                        <div key={stat.label} className="p-4 border border-border rounded-lg">
+                          <div className="text-xl sm:text-2xl font-semibold mb-1">{stat.value}</div>
                           <p className="text-xs text-muted-foreground font-normal">{stat.label}</p>
                         </div>
                       ))}

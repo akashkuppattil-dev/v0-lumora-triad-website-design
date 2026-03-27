@@ -56,23 +56,28 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services#web-development" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services/web-development" className="text-sm text-background/70 hover:text-background transition-colors">
                   Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/services#ui-ux-design" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services/ui-design" className="text-sm text-background/70 hover:text-background transition-colors">
                   UI/UX Design
                 </Link>
               </li>
               <li>
-                <Link href="/services#branding" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services/branding" className="text-sm text-background/70 hover:text-background transition-colors">
                   Branding
                 </Link>
               </li>
               <li>
-                <Link href="/services#digital-strategy" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services/digital-strategy" className="text-sm text-background/70 hover:text-background transition-colors">
                   Digital Strategy
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/impact" className="text-sm text-background/70 hover:text-background transition-colors font-semibold">
+                  Impact & Stats
                 </Link>
               </li>
             </ul>
