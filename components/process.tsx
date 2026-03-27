@@ -48,32 +48,38 @@ export function Process() {
             </span>
           </div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-20">
-            Our process
+          <h2 className="text-6xl lg:text-7xl font-bold mb-24 text-balance">
+            How we work
           </h2>
 
           {/* Process Steps */}
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {PROCESS_STEPS.map((step, index) => (
               <div
                 key={step.number}
-                className="flex gap-12 pb-12 border-b border-border last:border-b-0"
-                style={{
-                  animationDelay: isVisible ? `${index * 80}ms` : '0ms',
-                  animation: isVisible ? 'slideIn 0.7s ease-out forwards' : 'none'
-                }}
+                className={`group p-8 rounded-lg border border-border hover:border-foreground hover:bg-secondary transition-all duration-300 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
               >
                 {/* Step Number */}
-                <div className="flex-shrink-0 min-w-32">
-                  <div className="text-6xl font-bold text-muted-foreground">{step.number}</div>
+                <div className="text-5xl lg:text-6xl font-bold text-muted-foreground group-hover:text-foreground transition-colors mb-6">
+                  {step.number}
                 </div>
 
                 {/* Step Content */}
-                <div className="flex-1 pt-2">
-                  <h3 className="text-3xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl">
+                <div>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-foreground transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm lg:text-base text-muted-foreground font-light leading-relaxed">
                     {step.description}
                   </p>
+                </div>
+                
+                {/* Arrow indicator */}
+                <div className="mt-6 text-lg font-light text-muted-foreground group-hover:translate-x-2 transition-transform duration-300">
+                  {index < PROCESS_STEPS.length - 1 && '↓'}
                 </div>
               </div>
             ))}

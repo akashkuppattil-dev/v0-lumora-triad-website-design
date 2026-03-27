@@ -64,7 +64,7 @@ export function FeaturedWork() {
             </span>
           </div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-20">
+          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
             Featured work
           </h2>
 
@@ -79,28 +79,35 @@ export function FeaturedWork() {
                   animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none'
                 }}
               >
-                {/* Project Image */}
-                <div className="relative h-96 mb-6 rounded-lg overflow-hidden group-hover:shadow-lg transition-all duration-500 border border-border">
+                {/* Project Image with overlay metadata */}
+                <div className="relative h-96 mb-8 rounded-lg overflow-hidden group-hover:shadow-xl transition-all duration-500 border border-border">
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Case Study Label */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs font-bold uppercase tracking-widest bg-background/90 backdrop-blur px-3 py-2 rounded">
+                      Case Study
+                    </span>
+                  </div>
                 </div>
 
                 {/* Project Info */}
-                <div className="grid lg:grid-cols-4 gap-4 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
                   <div>
-                    <h3 className="text-2xl font-bold group-hover:text-muted-foreground transition-colors">
+                    <h3 className="text-2xl lg:text-3xl font-bold group-hover:text-muted-foreground transition-colors mb-2">
                       {project.title}
                     </h3>
                   </div>
                   <div className="text-sm text-muted-foreground font-light">
-                    <div className="font-medium text-foreground mb-1">{project.year}</div>
-                    <div>{project.category}</div>
+                    <div className="font-medium text-foreground mb-2">{project.year}</div>
+                    <div className="leading-relaxed">{project.category}</div>
                   </div>
-                  <div className="text-sm text-muted-foreground font-light col-span-2">
+                  <div className="text-sm text-muted-foreground font-light lg:col-span-2">
                     {project.description}
                   </div>
                 </div>

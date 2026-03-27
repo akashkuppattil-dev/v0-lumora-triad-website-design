@@ -21,10 +21,10 @@ export function Navbar() {
         ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm' 
         : 'bg-background/50 backdrop-blur-none border-b border-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold tracking-tight">
+          <Link href="/" className="text-xl sm:text-2xl font-bold tracking-tight hover:opacity-70 transition-opacity">
             Lumora<span className="font-light">.Triad</span>
           </Link>
 
@@ -57,7 +57,9 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:inline-block text-sm font-medium border border-foreground px-6 py-2 hover:bg-foreground hover:text-background transition-all duration-300">
+          <button className="hidden md:inline-block text-sm font-medium border border-foreground px-6 py-2 rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 group inline-flex items-center gap-2">
+            Get Started
+            <span className="font-light group-hover:translate-x-1 transition-transform">→</span>
             Start Project →
           </button>
 

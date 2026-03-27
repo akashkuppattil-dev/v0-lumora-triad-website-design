@@ -6,17 +6,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-foreground text-background py-16 px-6 lg:px-8 border-t border-background/20">
+    <footer className="bg-foreground text-background py-20 px-4 sm:px-6 lg:px-8 border-t border-background/20">
       <div className="max-w-7xl mx-auto">
         {/* Top Section */}
-        <div className="grid md:grid-cols-4 gap-12 mb-16 pb-16 border-b border-background/20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 pb-16 border-b border-background/20">
           {/* Brand */}
-          <div>
-            <h3 className="text-xl font-bold tracking-tight mb-4">
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-4">
               Lumora<span className="font-light">.Triad</span>
             </h3>
-            <p className="text-sm text-background/60 font-light">
-              Premium digital solutions for brands that demand clarity and performance.
+            <p className="text-xs sm:text-sm text-background/60 font-light leading-relaxed">
+              Premium digital solutions for ambitious brands.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
-                  SEO & Growth
+                  Digital Strategy
                 </a>
               </li>
             </ul>

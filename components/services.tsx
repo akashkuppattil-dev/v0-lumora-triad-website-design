@@ -6,27 +6,22 @@ const SERVICES = [
   {
     title: 'Web Development',
     description: 'React, Next.js, and Django backends built for scale, performance, and maintainability.',
-    icon: '→'
+    image: '/service-web-dev.jpg'
   },
   {
     title: 'UI/UX Design',
     description: 'Digital products designed with precision, clarity, and a focus on user experience.',
-    icon: '→'
+    image: '/service-ui-design.jpg'
   },
   {
     title: 'Branding',
     description: 'Visual identity systems and brand strategies that resonate with modern audiences.',
-    icon: '→'
+    image: '/service-branding.jpg'
   },
   {
-    title: 'SEO & Growth',
-    description: 'Technical SEO optimization and growth strategies for sustainable business expansion.',
-    icon: '→'
-  },
-  {
-    title: 'AI Integrations',
-    description: 'Custom AI solutions and integrations that enhance product capabilities and user engagement.',
-    icon: '→'
+    title: 'Digital Strategy',
+    description: 'Strategic planning and research-driven approaches to digital transformation.',
+    image: '/service-strategy.jpg'
   }
 ]
 
@@ -68,30 +63,41 @@ export function Services() {
             </span>
           </div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-20">
-            Core services
+          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
+            Services we provide
           </h2>
 
-          {/* Services Grid */}
-          <div className="space-y-px">
+          {/* Services Grid - Alternating Layout */}
+          <div className="space-y-24">
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
-                className="group py-8 px-8 border border-border hover:bg-secondary transition-colors duration-300 cursor-pointer"
-                style={{
-                  animationDelay: isVisible ? `${index * 50}ms` : '0ms',
-                  animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
-                }}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
               >
-                <div className="flex items-start justify-between gap-8">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground font-light leading-relaxed max-w-lg">
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="text-xl font-light text-muted-foreground group-hover:text-foreground transition-colors pt-1">
-                    {service.icon}
+                {/* Content - alternates position on desktop */}
+                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                  <h3 className="text-4xl lg:text-5xl font-bold mb-6">{service.title}</h3>
+                  <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
+                    {service.description}
+                  </p>
+                  <button className="group inline-flex items-center gap-3 text-foreground font-medium hover:translate-x-2 transition-transform duration-300">
+                    Learn more
+                    <span className="text-lg">→</span>
+                  </button>
+                </div>
+
+                {/* Image - alternates position on desktop */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <div className="relative h-80 lg:h-96 rounded-lg overflow-hidden border border-border group">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
               </div>

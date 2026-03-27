@@ -41,31 +41,38 @@ export function About() {
           </div>
 
           {/* Main Statement */}
-          <div className="mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mb-12">
-              Built for brands that demand clarity, performance, and modern design.
+          <div className="mb-20">
+            <h2 className="text-6xl lg:text-7xl font-bold leading-tight max-w-5xl mb-16 text-balance">
+              Design and engineering for ambitious brands.
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-16">
               <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                Lumora Triad is a digital studio of designers and developers who believe in the power of thoughtful design paired with solid engineering.
+                Lumora Triad is a digital studio of designers, developers, and strategists who believe in the power of thoughtful design paired with robust engineering.
               </p>
               <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                We craft digital experiences that don't just look beautiful—they perform at scale, drive measurable results, and establish lasting brand identity for forward-thinking companies.
+                We build digital systems that scale. From web development and UI/UX design to branding and AI integrations, we create experiences that perform, inspire, and drive measurable business growth.
               </p>
             </div>
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-3 gap-8 py-16 border-y border-border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y border-border">
             {[
-              { number: '20+', label: 'Projects Delivered' },
-              { number: '10+', label: 'Brands Transformed' },
-              { number: '100%', label: 'Focused Execution' }
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
+              { number: '120+', label: 'Projects' },
+              { number: '45+', label: 'Global Clients' },
+              { number: '8 yrs', label: 'Industry Exp' },
+              { number: '99.8%', label: 'Satisfaction' }
+            ].map((stat, index) => (
+              <div 
+                key={stat.label} 
+                className={`text-center transition-all duration-700 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
+              >
                 <div className="text-4xl lg:text-5xl font-bold mb-2">{stat.number}</div>
-                <p className="text-sm text-muted-foreground font-light">{stat.label}</p>
+                <p className="text-xs lg:text-sm text-muted-foreground font-light uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>

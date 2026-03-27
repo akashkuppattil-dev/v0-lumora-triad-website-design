@@ -70,20 +70,20 @@ export function Testimonials() {
             </span>
           </div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-20">
-            Trusted by leading brands
+          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
+            Trusted by ambitious brands
           </h2>
 
           {/* Testimonial Display */}
-          <div className="min-h-80">
-            <div className="space-y-8">
-              <blockquote className="text-3xl lg:text-4xl font-bold leading-tight">
-                "{TESTIMONIALS[activeIndex].quote}"
+          <div className="min-h-96 p-12 bg-secondary rounded-lg border border-border">
+            <div className="space-y-10">
+              <blockquote className="text-3xl lg:text-4xl font-bold leading-tight text-foreground">
+                &ldquo;{TESTIMONIALS[activeIndex].quote}&rdquo;
               </blockquote>
 
-              <div className="space-y-2">
-                <p className="text-lg font-medium">{TESTIMONIALS[activeIndex].author}</p>
-                <p className="text-muted-foreground font-light">
+              <div className="space-y-3 border-t border-border pt-8">
+                <p className="text-lg font-semibold text-foreground">{TESTIMONIALS[activeIndex].author}</p>
+                <p className="text-muted-foreground font-light text-sm">
                   {TESTIMONIALS[activeIndex].role}
                 </p>
               </div>
