@@ -27,22 +27,22 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#work" className="text-sm text-background/60 hover:text-background transition-colors">
+                <Link href="/work" className="text-sm text-background/60 hover:text-background transition-colors">
                   Work
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services" className="text-sm text-background/70 hover:text-background transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/#about" className="text-sm text-background/70 hover:text-background transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/contact" className="text-sm text-background/70 hover:text-background transition-colors">
                   Contact
                 </Link>
               </li>
@@ -56,24 +56,24 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services#web-development" className="text-sm text-background/70 hover:text-background transition-colors">
                   Web Development
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services#ui-ux-design" className="text-sm text-background/70 hover:text-background transition-colors">
                   UI/UX Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services#branding" className="text-sm text-background/70 hover:text-background transition-colors">
                   Branding
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-background/70 hover:text-background transition-colors">
+                <Link href="/services#digital-strategy" className="text-sm text-background/70 hover:text-background transition-colors">
                   Digital Strategy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

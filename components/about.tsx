@@ -42,15 +42,15 @@ export function About() {
 
           {/* Main Statement */}
           <div className="mb-20">
-            <h2 className="text-6xl lg:text-7xl font-bold leading-tight max-w-5xl mb-16 text-balance">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight max-w-5xl mb-16 text-balance">
               Design and engineering for ambitious brands.
             </h2>
 
             <div className="grid md:grid-cols-2 gap-16">
-              <p className="text-lg text-muted-foreground font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed">
                 Lumora Triad is a digital studio of designers, developers, and strategists who believe in the power of thoughtful design paired with robust engineering.
               </p>
-              <p className="text-lg text-muted-foreground font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed">
                 We build digital systems that scale. From web development and UI/UX design to branding and AI integrations, we create experiences that perform, inspire, and drive measurable business growth.
               </p>
             </div>

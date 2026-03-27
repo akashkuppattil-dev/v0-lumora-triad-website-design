@@ -32,24 +32,24 @@ export function Hero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-7xl lg:text-8xl font-bold leading-tight tracking-tight text-balance">
-              We build digital systems that scale.
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-semibold leading-tight tracking-tight text-balance text-foreground">
+              Build digital experiences that scale.
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-lg">
-              Web development, UI/UX design, branding, and scalable digital solutions engineered for growth.
+            <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-xl">
+              We craft premium digital products for ambitious brands. From web development and design to AI integration, we build systems that perform.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <button className="px-8 py-4 bg-foreground text-background font-medium rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 group inline-flex items-center gap-2 whitespace-nowrap">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <button className="px-6 py-3 bg-foreground text-background font-medium rounded-full hover:shadow-md hover:opacity-90 transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm">
                 Start Your Project
-                <span className="font-light group-hover:translate-x-2 transition-transform duration-300">→</span>
+                <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
               </button>
-              <button className="px-8 py-4 border border-foreground text-foreground font-medium rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 group inline-flex items-center gap-2 whitespace-nowrap">
+              <button className="px-6 py-3 text-foreground font-medium hover:underline transition-all duration-200 group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm">
                 View Our Work
-                <span className="font-light group-hover:translate-x-2 transition-transform duration-300">→</span>
+                <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
               </button>
             </div>
           </div>

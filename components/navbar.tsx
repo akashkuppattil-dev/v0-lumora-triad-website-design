@@ -29,27 +29,27 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-12">
+          <div className="hidden md:flex gap-8 lg:gap-12">
             <Link
-              href="#work"
+              href="/work"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
             >
               Work
             </Link>
             <Link
-              href="#services"
+              href="/services"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
             >
               Services
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
             >
               About
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
             >
               Contact
@@ -57,11 +57,10 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:inline-block text-sm font-medium border border-foreground px-6 py-2 rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 group inline-flex items-center gap-2">
+          <Link href="/contact" className="hidden md:inline-flex text-sm font-medium px-6 py-2 rounded-full bg-foreground text-background hover:shadow-md hover:opacity-90 transition-all duration-200 group items-center gap-2">
             Get Started
             <span className="font-light group-hover:translate-x-1 transition-transform">→</span>
-            Start Project →
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button

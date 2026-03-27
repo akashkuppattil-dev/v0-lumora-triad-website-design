@@ -83,9 +83,9 @@ export function Services() {
                   <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
                     {service.description}
                   </p>
-                  <button className="group inline-flex items-center gap-3 text-foreground font-medium hover:translate-x-2 transition-transform duration-300">
+                  <button className="group inline-flex items-center gap-2 text-foreground font-medium hover:underline transition-all duration-200">
                     Learn more
-                    <span className="text-lg">→</span>
+                    <span className="text-sm group-hover:translate-x-1 transition-transform duration-200">→</span>
                   </button>
                 </div>
 
