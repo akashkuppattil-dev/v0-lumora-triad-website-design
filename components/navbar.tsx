@@ -31,6 +31,12 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6 lg:gap-8">
             <Link
+              href="/"
+              className="text-sm font-medium hover:text-muted-foreground transition-colors"
+            >
+              Home
+            </Link>
+            <Link
               href="/work"
               className="text-sm font-medium hover:text-muted-foreground transition-colors"
             >
@@ -54,6 +60,7 @@ export function Navbar() {
             >
               Contact
             </Link>
+
           </div>
 
           {/* CTA Button */}
