@@ -105,7 +105,7 @@ export function Navbar() {
             {/* Brand Logo */}
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:opacity-70 transition-opacity flex-shrink-0 z-[110] relative">
               <div className="relative w-8 h-8 sm:w-10 sm:h-10 overflow-hidden rounded-full border border-border shadow-sm">
-                <Image src="/company-logo.png" alt="Lumora Triad" fill className="object-cover rounded-full" />
+                <Image src="/company-logo.png" alt="Lumora Triad" width={40} height={40} className="object-cover rounded-full" />
               </div>
               <span className="text-xl sm:text-2xl font-bold tracking-tight hidden sm:block mt-1">
                 Lumora<span className="font-light">.Triad</span>

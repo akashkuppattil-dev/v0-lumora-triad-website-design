@@ -1,15 +1,15 @@
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background pt-32 lg:pt-48">
+    <main className="min-h-screen bg-background pt-28 lg:pt-48">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         {/* Editorial Title */}
-        <section className="mb-32">
-          <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black leading-[0.8] tracking-tighter mb-16">
+        <section className="mb-10 lg:mb-32">
+          <h1 className="text-5xl sm:text-7xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-6 lg:mb-16">
             LUMORA<br/>TRIAD.
           </h1>
-          <div className="grid lg:grid-cols-2 gap-24">
-            <div className="space-y-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
+            <div className="space-y-6 lg:space-y-12">
               <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
                 Our philosophy is simple: bridge the gap between complex engineering and premium design.
               </h2>
@@ -47,8 +47,8 @@ export default function AboutPage() {
         </section>
 
         {/* Approach Section */}
-        <section className="py-32 border-t border-border">
-          <div className="grid lg:grid-cols-3 gap-16 lg:gap-24">
+        <section className="py-12 lg:py-32 border-t border-border">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-24">
             <div>
               <span className="text-[10px] uppercase tracking-widest font-black opacity-40 mb-8 block">01 / Design</span>
               <h3 className="text-3xl font-bold mb-6">User-Centric Systems</h3>
@@ -74,9 +74,9 @@ export default function AboutPage() {
         </section>
 
         {/* Tech Stack Visual - Minimal */}
-        <section className="py-32 border-t border-border bg-foreground text-background -mx-6 lg:-mx-8 px-6 lg:px-8">
+        <section className="py-12 lg:py-32 border-t border-border bg-foreground text-background -mx-4 lg:-mx-8 px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl lg:text-7xl font-bold mb-24 tracking-tighter">Technology Stack.</h2>
+            <h2 className="text-3xl lg:text-7xl font-bold mb-10 lg:mb-24 tracking-tighter">Technology Stack.</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
               {[
                 { label: 'Frontend', items: ['Next.js', 'React', 'Tailwind', 'Framermotion'] },
@@ -97,13 +97,13 @@ export default function AboutPage() {
           </div>
         </section>
         {/* Social / Connect */}
-        <section className="py-32 border-t border-border">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <section className="py-12 lg:py-32 border-t border-border">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
             <div>
               <h2 className="text-4xl lg:text-6xl font-black leading-tight tracking-tighter uppercase mb-6">Connect across the web.</h2>
               <p className="text-lg text-muted-foreground max-w-md">We share case studies, technical insights, and studio updates across our platforms.</p>
             </div>
-            <div className="grid grid-cols-2 gap-x-12 gap-y-16">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-8 lg:gap-x-12 lg:gap-y-16">
               {[
                 { label: 'Twitter', url: 'https://x.com/LumoraTraid', action: 'Follow X' },
                 { label: 'LinkedIn', url: 'https://www.linkedin.com/in/lumoratriad/', action: 'Connect' },

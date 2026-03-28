@@ -128,80 +128,103 @@ const SERVICES_DETAILED = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="pt-32 lg:pt-48 pb-24 px-6 lg:px-8">
+      <div className="pt-28 lg:pt-48 pb-12 lg:pb-24 px-4 lg:px-8">
         <div className="max-w-[1400px] mx-auto">
           {/* Header Section */}
-          <section className="mb-32">
-            <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black leading-[0.8] tracking-tighter mb-16 uppercase">
+          <section className="mb-10 lg:mb-32">
+            <h1 className="text-4xl sm:text-7xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-6 lg:mb-16 uppercase">
               Capabilities.
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground font-normal max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-xl text-muted-foreground font-normal max-w-2xl leading-relaxed">
               We provide a balanced ecosystem of design and engineering services. Our solutions are built to scale, perform, and deliver long-term business value.
             </p>
           </section>
 
-          {/* Services List - Clean & Professional */}
-          <div className="space-y-64">
+          {/* Services List */}
+          <div className="space-y-0">
             {SERVICES_DETAILED.map((service, index) => {
-              // Create a rhythmic alternating pattern (0, 1, 2)
               const pattern = index % 3;
-              
+
               return (
-                <section 
-                  key={service.id} 
-                  className="grid lg:grid-cols-3 gap-12 lg:gap-20 pt-24 border-t border-border group"
+                <section
+                  key={service.id}
+                  className="pt-8 lg:pt-24 pb-8 lg:pb-0 border-t border-border group"
                 >
-                  {/* Info Column */}
-                  <div className={`space-y-8 ${
-                    pattern === 1 ? 'lg:order-2' : 
-                    pattern === 2 ? 'lg:order-2' : 'lg:order-1'
-                  }`}>
-                    <div className="flex items-center gap-4 opacity-40 text-background mix-blend-difference">
-                      <span className="text-sm font-black italic">0{index + 1}</span>
-                      <div className="w-8 h-px bg-foreground" />
+                  {/* ── DESKTOP: 3-column grid ── */}
+                  <div className="hidden lg:grid lg:grid-cols-3 lg:gap-20 items-start">
+                    <div className={`space-y-8 ${
+                      pattern === 1 ? 'lg:order-2' :
+                      pattern === 2 ? 'lg:order-2' : 'lg:order-1'
+                    }`}>
+                      <div className="flex items-center gap-4 opacity-40">
+                        <span className="text-sm font-black italic">0{index + 1}</span>
+                        <div className="w-8 h-px bg-foreground" />
+                      </div>
+                      <div>
+                        <h2 className="text-4xl lg:text-6xl font-bold mb-4 tracking-tighter uppercase">{service.title}</h2>
+                        <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6">{service.subtitle}</p>
+                        <p className="text-base text-muted-foreground leading-relaxed mb-8">{service.description}</p>
+                      </div>
+                      <Link href={`/services/${service.id}`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest hover:gap-4 transition-all">
+                        View detailed scope <span>→</span>
+                      </Link>
                     </div>
-                    <div>
-                      <h2 className="text-4xl lg:text-6xl font-bold mb-4 tracking-tighter uppercase">{service.title}</h2>
-                      <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6">{service.subtitle}</p>
-                      <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                        {service.description}
-                      </p>
+                    <div className={`relative aspect-square lg:aspect-auto lg:h-[420px] rounded-3xl overflow-hidden border border-border bg-secondary group-hover:shadow-2xl transition-all duration-700 ${
+                      pattern === 1 ? 'lg:order-1' :
+                      pattern === 2 ? 'lg:order-3' : 'lg:order-2'
+                    }`}>
+                      <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
-                    <Link 
-                      href={`/services/${service.id}`}
-                      className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest hover:gap-4 transition-all"
-                    >
+                    <div className={`${
+                      pattern === 1 ? 'lg:order-3' :
+                      pattern === 2 ? 'lg:order-1' : 'lg:order-3'
+                    }`}>
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-8 opacity-30">Scope of Work</h3>
+                      <ul className="space-y-5">
+                        {service.features.map(feature => (
+                          <li key={feature} className="flex items-start gap-4 group/item">
+                            <div className="w-1.5 h-1.5 rounded-full bg-foreground/20 mt-1.5 group-hover/item:bg-foreground transition-colors flex-shrink-0" />
+                            <span className="text-sm font-bold tracking-tight opacity-80 group-hover/item:opacity-100 transition-opacity">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* ── MOBILE: stacked layout ── */}
+                  <div className="lg:hidden space-y-5">
+                    <div className="flex items-center gap-3 opacity-40">
+                      <span className="text-xs font-black italic">0{index + 1}</span>
+                      <div className="w-6 h-px bg-foreground" />
+                    </div>
+                    <h2 className="text-2xl font-bold tracking-tight uppercase">{service.title}</h2>
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">{service.subtitle}</p>
+
+                    {/* Image */}
+                    <div className="relative h-48 w-full rounded-2xl overflow-hidden border border-border bg-secondary">
+                      <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                    </div>
+
+                    <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+
+                    {/* Scope inline on mobile */}
+                    <div className="pt-4 border-t border-border/60">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 block mb-3">Scope of Work</span>
+                      <ul className="space-y-2">
+                        {service.features.map(feature => (
+                          <li key={feature} className="flex items-start gap-3">
+                            <div className="w-1 h-1 rounded-full bg-foreground/30 mt-1.5 flex-shrink-0" />
+                            <span className="text-sm font-medium opacity-80">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <Link href={`/services/${service.id}`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest">
                       View detailed scope <span>→</span>
                     </Link>
-                  </div>
-
-                  {/* Image Column */}
-                  <div className={`relative aspect-square lg:aspect-auto h-full min-h-[450px] rounded-3xl overflow-hidden border border-border bg-secondary group-hover:shadow-2xl transition-all duration-700 ${
-                    pattern === 1 ? 'lg:order-1' :
-                    pattern === 2 ? 'lg:order-3' : 'lg:order-2'
-                  }`}>
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                  </div>
-
-                  {/* Features Column */}
-                  <div className={`${
-                    pattern === 1 ? 'lg:order-3' :
-                    pattern === 2 ? 'lg:order-1' : 'lg:order-3'
-                  }`}>
-                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-10 opacity-30">Scope of Work</h3>
-                    <ul className="space-y-8">
-                      {service.features.map(feature => (
-                        <li key={feature} className="flex items-start gap-4 group/item">
-                          <div className="w-1.5 h-1.5 rounded-full bg-foreground/20 mt-1.5 group-hover/item:bg-foreground transition-colors" />
-                          <span className="text-sm font-bold tracking-tight opacity-80 group-hover/item:opacity-100 transition-opacity">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </section>
               );
@@ -210,14 +233,14 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <section className="py-48 px-6 lg:px-8 bg-foreground text-background">
+      <section className="py-16 lg:py-48 px-6 lg:px-8 bg-foreground text-background mt-10 lg:mt-0">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl lg:text-8xl font-bold leading-tight mb-12 tracking-tighter">
+          <h2 className="text-3xl lg:text-8xl font-bold leading-tight mb-8 lg:mb-12 tracking-tighter">
             Let's build for the future of the web.
           </h2>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center gap-2 px-12 py-5 bg-background text-foreground font-bold rounded-full hover:scale-105 active:scale-95 transition-all duration-300 group text-sm uppercase tracking-widest"
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 lg:px-12 py-4 lg:py-5 bg-background text-foreground font-bold rounded-full hover:scale-105 active:scale-95 transition-all duration-300 group text-sm uppercase tracking-widest"
           >
             Start Your Journey
             <span className="group-hover:translate-x-1 transition-transform">→</span>

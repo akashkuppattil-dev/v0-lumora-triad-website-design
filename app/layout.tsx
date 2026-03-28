@@ -9,13 +9,12 @@ import { Footer } from '@/components/footer'
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
   themeColor: '#ffffff',
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lumoratriad.com'),
+  metadataBase: new URL('https://www.lumoratriad.in'),
   title: 'Lumora Triad | Premium Web Development & Digital Solutions',
   description: 'We build digital systems that scale businesses. Web development, UI/UX design, branding, and AI integrations for modern enterprises.',
   icons: {

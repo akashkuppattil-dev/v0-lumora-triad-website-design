@@ -58,7 +58,7 @@ export function FeaturedWork() {
   }, [])
 
   return (
-    <section id="work" className="py-24 px-6 lg:px-8 bg-background border-t border-border">
+    <section id="work" className="py-12 lg:py-24 px-4 lg:px-8 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
@@ -67,15 +67,15 @@ export function FeaturedWork() {
           }`}
         >
           {/* Section Header */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 lg:mb-24 gap-6 lg:gap-12">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-4 lg:mb-8">
                 <div className="w-12 h-px bg-foreground" />
                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
                   Latest Showcase
                 </span>
               </div>
-              <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter uppercase leading-[0.8]">
+              <h2 className="text-4xl lg:text-7xl font-bold tracking-tighter uppercase leading-[0.85]">
                 Selected<br/>Work.
               </h2>
             </div>
@@ -87,14 +87,14 @@ export function FeaturedWork() {
           </div>
 
           {/* High-Impact Vertical Showcase (One Below Another) */}
-          <div className="space-y-32 lg:space-y-48">
+          <div className="space-y-12 lg:space-y-48">
             {PROJECTS.map((project, index) => (
               <div
                 key={project.title}
                 className="group relative flex flex-col gap-12 transition-all duration-700"
               >
                 {/* Immersive Full-Width Image Container */}
-                <div className="relative w-full aspect-[21/9] rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-lg group-hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.25)] transition-all duration-1000">
+                <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] rounded-2xl lg:rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-lg group-hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.25)] transition-all duration-1000">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -112,9 +112,9 @@ export function FeaturedWork() {
                 </div>
 
                 {/* Minimalist Info Cluster - Positioned for Flow */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between px-4 gap-8">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between px-1 gap-3 lg:gap-8">
                   <div className="max-w-xl">
-                    <h3 className="text-4xl lg:text-6xl font-bold tracking-tighter mb-4 uppercase leading-none group-hover:tracking-normal transition-all duration-700">
+                    <h3 className="text-2xl lg:text-6xl font-bold tracking-tighter mb-2 lg:mb-4 uppercase leading-none group-hover:tracking-normal transition-all duration-700">
                       {project.title}
                     </h3>
                     <p className="text-base text-muted-foreground font-medium leading-relaxed opacity-60 group-hover:opacity-100 transition-opacity">

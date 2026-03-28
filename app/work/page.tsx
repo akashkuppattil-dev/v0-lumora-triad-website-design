@@ -88,11 +88,11 @@ const PROJECTS = [
 export default function WorkPage() {
   return (
     <div className="min-h-screen bg-background">
-      <main className="pt-32">
+      <main className="pt-28 lg:pt-32">
         {/* Header Section */}
-        <section className="pb-24 px-4 sm:px-6 lg:px-8 border-b border-border">
+        <section className="pb-10 lg:pb-24 px-4 lg:px-8 border-b border-border">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-4 lg:mb-6 text-balance">
               Our latest work
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground font-normal max-w-3xl leading-relaxed">
@@ -102,9 +102,9 @@ export default function WorkPage() {
         </section>
 
         {/* Projects Grid - Reverted to Alternating 1-Column Layout */}
-        <section className="py-24 px-6 lg:px-8 bg-background">
+        <section className="py-10 lg:py-24 px-4 lg:px-8 bg-background">
           <div className="max-w-7xl mx-auto">
-            <div className="space-y-48 lg:space-y-64">
+            <div className="space-y-16 lg:space-y-64">
               {PROJECTS.map((project, index) => {
                 // Update images for Hexamech and Trading to v2
                 let projectImg = project.image;
@@ -114,7 +114,7 @@ export default function WorkPage() {
                 return (
                   <div key={project.id} className="grid lg:grid-cols-2 gap-12 lg:gap-32 items-center group">
                     {/* Content Section */}
-                    <div className={`space-y-10 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                    <div className={`space-y-6 lg:space-y-10 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                       <div className="flex items-center gap-6 opacity-40">
                         <span className="text-[10px] font-black uppercase tracking-widest">{project.year}</span>
                         <div className="w-12 h-px bg-foreground" />
@@ -152,14 +152,14 @@ export default function WorkPage() {
                         ))}
                       </div>
 
-                      <button className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest border-b-2 border-foreground/20 pb-2 group-hover:border-foreground group-hover:gap-4 transition-all">
-                        Deep dive into case study <span>→</span>
+                      <button aria-label={`Deep dive into ${project.title} case study`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest border-b-2 border-foreground/20 pb-2 group-hover:border-foreground group-hover:gap-4 transition-all">
+                        Deep dive into case study <span aria-hidden="true">→</span>
                       </button>
                     </div>
 
                     {/* Immersive Image Display */}
                     <div className={`relative ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
-                      <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[700px] w-full rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-2xl transition-all duration-700 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)]">
+                      <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[700px] w-full rounded-2xl lg:rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-2xl transition-all duration-700 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)]">
                         <img
                           src={projectImg}
                           alt={project.title}
@@ -179,9 +179,9 @@ export default function WorkPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 px-6 lg:px-8 bg-foreground text-background">
+        <section className="py-14 lg:py-24 px-4 lg:px-8 bg-foreground text-background">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-4 lg:mb-6">
               Interested in working together?
             </h2>
             <p className="text-lg opacity-90 font-normal mb-8 max-w-2xl mx-auto">

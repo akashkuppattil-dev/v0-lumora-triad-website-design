@@ -24,7 +24,7 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="py-24 px-6 lg:px-8 bg-background border-t border-border">
+    <section id="about" className="py-12 lg:py-24 px-4 lg:px-8 bg-background border-t border-border">
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
@@ -33,7 +33,7 @@ export function About() {
           }`}
         >
           {/* Section Divider */}
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-8 lg:mb-16">
             <div className="w-12 h-px bg-foreground" />
             <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
               Our Studio
@@ -41,12 +41,12 @@ export function About() {
           </div>
 
           {/* Main Statement */}
-          <div className="mb-20">
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.9] max-w-4xl mb-16 text-balance tracking-tighter">
+          <div className="mb-8 lg:mb-20">
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.9] max-w-4xl mb-8 lg:mb-16 text-balance tracking-tighter">
               A premium web & product studio. Small team, sharp execution.
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-16">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
               <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
                 Lumora Triad is a focused web and design studio based in India, working with early-stage startups, growing brands, and local businesses that need a credible online presence built properly — not templated.
               </p>
@@ -62,10 +62,6 @@ export function About() {
                   <div>
                     <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Based In</span>
                     <span className="text-sm font-medium">Kerala, India — Remote Worldwide</span>
-                  </div>
-                  <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Studio Type</span>
-                    <span className="text-sm font-medium">Boutique · End-to-End</span>
                   </div>
                 </div>
               </div>
