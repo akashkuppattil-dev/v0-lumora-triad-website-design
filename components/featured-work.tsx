@@ -1,28 +1,38 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 
 const PROJECTS = [
   {
-    title: 'Design System Platform',
-    category: 'Web Development + UI/UX',
-    year: '2024',
-    description: 'Comprehensive design system for enterprise teams',
-    image: '/project-1.jpg'
+    title: 'Hexamech Linich Tools',
+    category: 'Industrial Engineering',
+    outcome: 'A modern industrial catalog and tools marketplace for precision engineering.',
+    image: '/project-hexamech-v2.png'
   },
   {
-    title: 'E-Commerce Transformation',
-    category: 'Full-Stack Development',
-    year: '2024',
-    description: '300% increase in conversion rate through UX optimization',
-    image: '/project-2.jpg'
+    title: 'BASIC Trading Company',
+    category: 'Wholesale & Supply',
+    outcome: 'Wholesale event materials platform for high-volume supply chain management.',
+    image: '/project-trading-v2.png'
   },
   {
-    title: 'Brand Identity Suite',
-    category: 'Branding + Design',
-    year: '2023',
-    description: 'Complete visual identity system and brand guidelines',
-    image: '/project-3.jpg'
+    title: 'E-commerce Platform',
+    category: 'Digital Commerce',
+    outcome: 'Scalable luxury storefront optimized for high conversion and mobile accessibility.',
+    image: '/case-study-ecommerce.jpg'
+  },
+  {
+    title: 'FinTech Ecosystem',
+    category: 'Product Engineering',
+    outcome: 'Enterprise-grade financial dashboard with real-time transaction processing.',
+    image: '/case-study-fintech.jpg'
+  },
+  {
+    title: 'SaaS Dashboard',
+    category: 'UI/UX Design',
+    outcome: 'Advanced design system and interactive dashboard for enterprise B2B SaaS.',
+    image: '/case-study-saas.jpg'
   }
 ]
 
@@ -37,7 +47,7 @@ export function FeaturedWork() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0 }
     )
 
     if (ref.current) {
@@ -53,88 +63,77 @@ export function FeaturedWork() {
         <div
           ref={ref}
           className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-10'
           }`}
         >
           {/* Section Header */}
-          <div className="flex items-center gap-4 mb-16">
-            <div className="w-12 h-px bg-foreground" />
-            <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Portfolio
-            </span>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-px bg-foreground" />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+                  Latest Showcase
+                </span>
+              </div>
+              <h2 className="text-5xl lg:text-7xl font-bold tracking-tighter uppercase leading-[0.8]">
+                Selected<br/>Work.
+              </h2>
+            </div>
+            <div className="lg:mb-4">
+              <Link href="/work" className="text-xs font-black uppercase tracking-widest border-b-2 border-foreground pb-2 hover:opacity-60 transition-all">
+                View All Case Studies →
+              </Link>
+            </div>
           </div>
 
-          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
-            Featured work
-          </h2>
-
-          {/* Projects Grid */}
-          <div className="space-y-8">
+          {/* High-Impact Vertical Showcase (One Below Another) */}
+          <div className="space-y-32 lg:space-y-48">
             {PROJECTS.map((project, index) => (
               <div
                 key={project.title}
-                className="group cursor-pointer"
-                style={{
-                  animationDelay: isVisible ? `${index * 100}ms` : '0ms',
-                  animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none'
-                }}
+                className="group relative flex flex-col gap-12 transition-all duration-700"
               >
-                {/* Project Image with overlay metadata */}
-                <div className="relative h-96 mb-8 rounded-lg overflow-hidden group-hover:shadow-xl transition-all duration-500 border border-border">
+                {/* Immersive Full-Width Image Container */}
+                <div className="relative w-full aspect-[21/9] rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-lg group-hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.25)] transition-all duration-1000">
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
                   />
+                  {/* Layered Content Overlay (Subtle) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   
-                  {/* Case Study Label */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs font-bold uppercase tracking-widest bg-background/90 backdrop-blur px-3 py-2 rounded">
-                      Case Study
+                  {/* Category Pill */}
+                  <div className="absolute top-8 left-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-700 delay-100">
+                    <span className="text-[10px] font-black uppercase tracking-widest bg-background/90 backdrop-blur-xl px-5 py-2.5 rounded-full border border-border shadow-2xl">
+                      {project.category}
                     </span>
                   </div>
                 </div>
 
-                {/* Project Info */}
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
-                  <div>
-                    <h3 className="text-2xl lg:text-3xl font-bold group-hover:text-muted-foreground transition-colors mb-2">
+                {/* Minimalist Info Cluster - Positioned for Flow */}
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between px-4 gap-8">
+                  <div className="max-w-xl">
+                    <h3 className="text-4xl lg:text-6xl font-bold tracking-tighter mb-4 uppercase leading-none group-hover:tracking-normal transition-all duration-700">
                       {project.title}
                     </h3>
+                    <p className="text-base text-muted-foreground font-medium leading-relaxed opacity-60 group-hover:opacity-100 transition-opacity">
+                      {project.outcome}
+                    </p>
                   </div>
-                  <div className="text-sm text-muted-foreground font-light">
-                    <div className="font-medium text-foreground mb-2">{project.year}</div>
-                    <div className="leading-relaxed">{project.category}</div>
-                  </div>
-                  <div className="text-sm text-muted-foreground font-light lg:col-span-2">
-                    {project.description}
+                  
+                  <div className="flex flex-col items-end">
+                    <Link href="/work" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] border-b-2 border-foreground/10 pb-2 group-hover:border-foreground group-hover:gap-6 transition-all duration-700">
+                      Explore Case Study <span>→</span>
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* View All CTA */}
-          <div className="mt-20 text-center">
-            <button className="text-lg font-medium border-b-2 border-foreground pb-2 hover:text-muted-foreground transition-colors">
-              View all projects →
-            </button>
-          </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   )
 }
+

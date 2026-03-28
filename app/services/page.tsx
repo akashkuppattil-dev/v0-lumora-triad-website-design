@@ -1,146 +1,230 @@
 'use client'
 
-import { Navbar } from '@/components/navbar'
-import { Footer } from '@/components/footer'
+import Link from 'next/link'
 
 const SERVICES_DETAILED = [
   {
     id: 'web-development',
-    title: 'Web Development',
-    subtitle: 'Performance-driven digital products',
-    description: 'We build web applications with modern technologies that scale. From Next.js frontends to Django backends, we create systems designed for growth and reliability.',
+    title: 'Web Design & Development',
+    subtitle: 'High-performance, responsive systems',
+    image: '/service-web-development-showcase.jpg',
+    description: 'We build web applications with modern technologies that scale. From Next.js frontends to robust API architectures, we create systems designed for growth and reliability.',
     features: [
       'Next.js & React applications',
-      'Node.js & Django backends',
-      'Database architecture & optimization',
-      'API design & integration',
       'Performance optimization',
-      'Deployment & DevOps'
+      'CMS architecture & integration',
+      'Interactive design systems',
+      'Custom web animations',
+      'Deployment & Vercel orchestration'
     ]
   },
   {
     id: 'ui-ux-design',
     title: 'UI/UX Design',
-    subtitle: 'User-centered digital experiences',
-    description: 'Thoughtful design that drives engagement and conversion. We create intuitive interfaces that users love, backed by research and best practices.',
+    subtitle: 'User-centered digital products',
+    image: '/service-ui-design-showcase.jpg',
+    description: 'Thoughtful design that drives engagement and conversion. We create intuitive interfaces that users love, backed by research and modern design principles.',
     features: [
-      'User research & personas',
-      'Wireframing & prototyping',
+      'User journey mapping',
+      'High-fidelity prototyping',
+      'Accessibility audits',
       'Visual design systems',
-      'Interaction design',
-      'Accessibility & testing',
-      'Design to development handoff'
+      'Interaction architecture',
+      'Design handoff systems'
     ]
   },
   {
     id: 'branding',
-    title: 'Branding',
-    subtitle: 'Visual identity & brand strategy',
-    description: 'We create comprehensive brand identities that resonate with your audience. From logo design to brand guidelines, we establish clarity and consistency.',
+    title: 'Branding & Identity',
+    subtitle: 'Visual systems & brand strategy',
+    image: '/service-branding-showcase.jpg',
+    description: 'We create comprehensive brand identities that resonate with modern audiences. From logo design to brand guidelines, we establish clarity and consistency.',
     features: [
       'Brand strategy & positioning',
-      'Logo design & variations',
-      'Color palettes & typography',
-      'Brand guidelines',
-      'Marketing collateral',
-      'Brand application'
+      'Logo & visual identity',
+      'Typography & color systems',
+      'Digital brand guidelines',
+      'Marketing collateral design',
+      'Brand consistency audits'
     ]
   },
   {
-    id: 'digital-strategy',
-    title: 'Digital Strategy',
-    subtitle: 'Growth-focused strategic planning',
-    description: 'We help businesses define their digital roadmap. Through research and analysis, we identify opportunities and create actionable strategies.',
+    id: 'backend-api',
+    title: 'Backend & API Development',
+    subtitle: 'Robust, secure server-side logic',
+    image: '/service-backend-v2.png',
+    description: 'We architect and build scalable server-side solutions and integrations. Focused on data integrity, security, and high-performance system communication.',
     features: [
-      'Market & competitor analysis',
-      'Digital roadmap planning',
-      'Technology recommendations',
-      'Growth strategies',
-      'Digital transformation',
-      'Implementation planning'
+      'Django & Python backends',
+      'Node.js & Go solutions',
+      'Database architecture',
+      'REST & GraphQL API design',
+      'Third-party integrations',
+      'Cloud infrastructure management'
+    ]
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-commerce Solutions',
+    subtitle: 'Scalable commerce experiences',
+    image: '/case-study-ecommerce.jpg',
+    description: 'Full-service digital commerce solutions built for growth. We help brands scale their online sales through custom storefronts and optimized checkout flows.',
+    features: [
+      'Custom store development',
+      'Seamless checkout experiences',
+      'Payment gateway orchestration',
+      'Inventory & CRM integration',
+      'Conversion rate optimization',
+      'Global commerce strategy'
+    ]
+  },
+  {
+    id: 'seo-growth',
+    title: 'SEO & Growth',
+    subtitle: 'Organic visibility & performance',
+    image: '/service-strategy.jpg',
+    description: 'Technical SEO and digital marketing strategies to increase your business reach and conversion efficiency through performance-driven approaches.',
+    features: [
+      'Technical SEO & code audits',
+      'Core Web Vitals optimization',
+      'Analytical growth tracking',
+      'Content strategy & execution',
+      'Conversion funnel analysis',
+      'Performance marketing strategy'
+    ]
+  },
+  {
+    id: 'ai-automation',
+    title: 'AI Integration & Automation',
+    subtitle: 'Modernizing business workflows',
+    image: '/case-study-saas.jpg',
+    description: 'Leveraging modern AI and automation to reduce costs and improve business efficiency through custom agents and intelligent process design.',
+    features: [
+      'Custom LLM implementations',
+      'Intelligent process automation',
+      'AI-driven user experiences',
+      'Workflow optimization scripts',
+      'Data-driven AI consultation',
+      'Automated reporting systems'
+    ]
+  },
+  {
+    id: 'maintenance',
+    title: 'Maintenance & Support',
+    subtitle: 'Ongoing technical partnership',
+    image: '/service-web-dev.jpg',
+    description: 'Reliable long-term support to ensure your digital systems remain stable, secure, and performant as your business continues to grow.',
+    features: [
+      '24/7 technical monitoring',
+      'Proactive security updates',
+      'Incremental system improvements',
+      'Performance tuning & scaling',
+      'Direct technical consultation',
+      'Priority support access'
     ]
   }
 ]
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      
-      <main className="pt-32">
-        {/* Header Section */}
-        <section className="pb-24 px-6 lg:px-8 border-b border-border">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">
-              Our services
+    <main className="min-h-screen bg-background">
+      <div className="pt-32 lg:pt-48 pb-24 px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto">
+          {/* Header Section */}
+          <section className="mb-32">
+            <h1 className="text-6xl sm:text-8xl lg:text-[10rem] font-black leading-[0.8] tracking-tighter mb-16 uppercase">
+              Capabilities.
             </h1>
-            <p className="text-lg text-muted-foreground font-normal max-w-2xl">
-              Comprehensive digital solutions to help your business grow, scale, and succeed in an increasingly digital world.
+            <p className="text-xl sm:text-2xl text-muted-foreground font-normal max-w-2xl leading-relaxed">
+              We provide a balanced ecosystem of design and engineering services. Our solutions are built to scale, perform, and deliver long-term business value.
             </p>
-          </div>
-        </section>
+          </section>
 
-        {/* Services Grid */}
-        <section className="py-24 px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-              {SERVICES_DETAILED.map((service) => (
-                <div
-                  key={service.id}
-                  className="p-8 border border-border rounded-lg hover:border-foreground transition-colors duration-300 group"
+          {/* Services List - Clean & Professional */}
+          <div className="space-y-64">
+            {SERVICES_DETAILED.map((service, index) => {
+              // Create a rhythmic alternating pattern (0, 1, 2)
+              const pattern = index % 3;
+              
+              return (
+                <section 
+                  key={service.id} 
+                  className="grid lg:grid-cols-3 gap-12 lg:gap-20 pt-24 border-t border-border group"
                 >
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground font-normal">{service.subtitle}</p>
+                  {/* Info Column */}
+                  <div className={`space-y-8 ${
+                    pattern === 1 ? 'lg:order-2' : 
+                    pattern === 2 ? 'lg:order-2' : 'lg:order-1'
+                  }`}>
+                    <div className="flex items-center gap-4 opacity-40 text-background mix-blend-difference">
+                      <span className="text-sm font-black italic">0{index + 1}</span>
+                      <div className="w-8 h-px bg-foreground" />
+                    </div>
+                    <div>
+                      <h2 className="text-4xl lg:text-6xl font-bold mb-4 tracking-tighter uppercase">{service.title}</h2>
+                      <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6">{service.subtitle}</p>
+                      <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                        {service.description}
+                      </p>
+                    </div>
+                    <Link 
+                      href={`/services/${service.id}`}
+                      className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest hover:gap-4 transition-all"
+                    >
+                      View detailed scope <span>→</span>
+                    </Link>
                   </div>
 
-                  <p className="text-base text-muted-foreground font-normal leading-relaxed mb-8">
-                    {service.description}
-                  </p>
+                  {/* Image Column */}
+                  <div className={`relative aspect-square lg:aspect-auto h-full min-h-[450px] rounded-3xl overflow-hidden border border-border bg-secondary group-hover:shadow-2xl transition-all duration-700 ${
+                    pattern === 1 ? 'lg:order-1' :
+                    pattern === 2 ? 'lg:order-3' : 'lg:order-2'
+                  }`}>
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                  </div>
 
-                  <div className="space-y-3 mb-8">
-                    <h4 className="text-xs font-semibold uppercase tracking-wider">What's included</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="text-sm text-muted-foreground font-normal flex items-start gap-3">
-                          <span className="text-foreground font-semibold mt-0.5">•</span>
-                          <span>{feature}</span>
+                  {/* Features Column */}
+                  <div className={`${
+                    pattern === 1 ? 'lg:order-3' :
+                    pattern === 2 ? 'lg:order-1' : 'lg:order-3'
+                  }`}>
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-10 opacity-30">Scope of Work</h3>
+                    <ul className="space-y-8">
+                      {service.features.map(feature => (
+                        <li key={feature} className="flex items-start gap-4 group/item">
+                          <div className="w-1.5 h-1.5 rounded-full bg-foreground/20 mt-1.5 group-hover/item:bg-foreground transition-colors" />
+                          <span className="text-sm font-bold tracking-tight opacity-80 group-hover/item:opacity-100 transition-opacity">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  <button className="group/btn inline-flex items-center gap-2 text-foreground font-medium text-sm hover:underline transition-all duration-200">
-                    Learn more
-                    <span className="group-hover/btn:translate-x-1 transition-transform duration-200">→</span>
-                  </button>
-                </div>
-              ))}
-            </div>
+                </section>
+              );
+            })}
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* CTA Section */}
-        <section className="py-24 px-6 lg:px-8 bg-secondary border-t border-border">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
-              Ready to get started?
-            </h2>
-            <p className="text-lg text-muted-foreground font-normal mb-8 max-w-2xl mx-auto">
-              Let's discuss which services are right for your business and create a plan together.
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center gap-2 px-8 py-3 bg-foreground text-background font-medium rounded-full hover:shadow-md hover:opacity-90 transition-all duration-200 group text-sm"
-            >
-              Schedule a consultation
-              <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-            </a>
-          </div>
-        </section>
-      </main>
+      <section className="py-48 px-6 lg:px-8 bg-foreground text-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl lg:text-8xl font-bold leading-tight mb-12 tracking-tighter">
+            Let's build for the future of the web.
+          </h2>
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center gap-2 px-12 py-5 bg-background text-foreground font-bold rounded-full hover:scale-105 active:scale-95 transition-all duration-300 group text-sm uppercase tracking-widest"
+          >
+            Start Your Journey
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+      </section>
 
-      <Footer />
-    </div>
+    </main>
   )
 }

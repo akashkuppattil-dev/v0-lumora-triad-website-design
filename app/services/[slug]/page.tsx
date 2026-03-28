@@ -7,9 +7,9 @@ import { ArrowRight, CheckCircle } from 'lucide-react'
 
 const SERVICE_DATA = {
   'web-development': {
-    title: 'Web Development',
-    subtitle: 'Building scalable, performant digital products',
-    description: 'We craft full-stack web applications using modern technologies like React, Next.js, and Django. Our focus is on creating systems that scale, perform, and adapt to your growing business needs.',
+    title: 'Web Design & Development',
+    subtitle: 'High-performance, responsive systems optimized for digital scale',
+    description: 'We build web applications with modern technologies that scale. From Next.js frontends to robust API architectures, we create systems designed for growth and reliability. Our focus is on creating systems that scale, perform, and adapt to your growing business needs.',
     image: '/service-web-development-showcase.jpg',
     whyMatters: 'In today\'s digital-first world, a robust web presence isn\'t just nice to have—it\'s essential. Poor performance, slow load times, and outdated technology stack can directly impact your bottom line. We build with scalability and performance in mind from day one.',
     benefits: [
@@ -31,7 +31,7 @@ const SERVICE_DATA = {
       { step: 4, title: 'Deployment', description: 'Launch with monitoring, backups, and optimization' }
     ]
   },
-  'ui-design': {
+  'ui-ux-design': {
     title: 'UI/UX Design',
     subtitle: 'Creating intuitive, beautiful digital experiences',
     description: 'Our design process combines user research, wireframing, and high-fidelity design systems to create interfaces that delight users and drive conversions. We design for clarity, usability, and beauty.',
@@ -57,9 +57,9 @@ const SERVICE_DATA = {
     ]
   },
   'branding': {
-    title: 'Branding',
-    subtitle: 'Crafting distinctive brand identities',
-    description: 'Branding goes beyond logos. We develop comprehensive identity systems that communicate your values, differentiate you from competitors, and create lasting impressions in your audience\'s minds.',
+    title: 'Branding & Identity',
+    subtitle: 'Crafting distinctive brand identities that resonate',
+    description: 'Branding goes beyond logos. We develop comprehensive identity systems that communicate your values, differentiate you from competitors, and create lasting impressions. From logo design to brand guidelines, we establish clarity and consistency.',
     image: '/service-branding-showcase.jpg',
     whyMatters: 'Your brand is more than a logo—it\'s the perception of everything you do. Strong branding creates recognition, builds trust, and allows you to command premium pricing. Weak branding leaves you indistinguishable from competitors.',
     benefits: [
@@ -79,6 +79,131 @@ const SERVICE_DATA = {
       { step: 2, title: 'Strategy', description: 'Develop positioning and brand messaging' },
       { step: 3, title: 'Design', description: 'Create visual identity and brand system' },
       { step: 4, title: 'Implementation', description: 'Rollout guidelines and collateral design' }
+    ]
+  },
+  'backend-api': {
+    title: 'Backend & API Development',
+    subtitle: 'Robust, secure server-side logic and system communication',
+    description: 'We architect and build scalable server-side solutions and integrations. Focused on data integrity, security, and high-performance system communication to power your complex digital workflows.',
+    image: '/project-admin-system.jpg',
+    whyMatters: 'Behind every great interface is a powerful backend. Slow APIs or insecure databases can cripple even the best-looking products. We build the engine that powers your business, ensuring performance and stability under load.',
+    benefits: [
+      { title: 'Data Integrity', description: 'Robust database structures ensuring information accuracy' },
+      { title: 'Performance', description: 'High-speed API responses and server-side logic' },
+      { title: 'Security', description: 'Enterprise-grade protection for your sensitive data' },
+      { title: 'Integration', description: 'Seamless communication between diverse systems' },
+      { title: 'Scalability', description: 'Backends designed to handle growing user volumes' },
+      { title: 'Documentation', description: 'Clear API documentation for developer accessibility' }
+    ],
+    caseStudies: [
+      { id: 1, title: 'FinTech API Infrastructure', category: 'Backend', image: '/case-study-fintech.jpg' },
+      { id: 2, title: 'Enterprise Resource System', category: 'Backend', image: '/project-business-platform.jpg' }
+    ],
+    process: [
+      { step: 1, title: 'Architecture', description: 'Design robust system structures and data models' },
+      { step: 2, title: 'Development', description: 'Clean, performant code using modern server-side tech' },
+      { step: 3, title: 'Security Audit', description: 'Vulnerability assessments and data protection hardening' },
+      { step: 4, title: 'Deployment', description: 'CI/CD pipelines and stable production environments' }
+    ]
+  },
+  'ecommerce': {
+    title: 'E-commerce Solutions',
+    subtitle: 'Scalable commerce experiences built for growth',
+    description: 'Full-service digital commerce solutions built for growth. We help brands scale their online sales through custom storefronts, optimized checkout flows, and seamless platform integrations.',
+    image: '/case-study-ecommerce.jpg',
+    whyMatters: 'E-commerce isn\'t just about selling; it\'s about the experience. Frictionless checkout, mobile optimization, and clear product presentation are the difference between a bounce and a buy in the modern retail landscape.',
+    benefits: [
+      { title: 'Conversion Focus', description: 'Driven by research-backed checkout optimizations' },
+      { title: 'Mobile First', description: 'Seamless shopping experiences on any device' },
+      { title: 'Payment Integration', description: 'Global, secure, and diverse payment options' },
+      { title: 'Inventory Control', description: 'Real-time syncing and management capabilities' },
+      { title: 'Global Reach', description: 'Multi-currency and multi-region readiness' },
+      { title: 'Analytics', description: 'Deep insight into customer behavior and sales data' }
+    ],
+    caseStudies: [
+      { id: 1, title: 'Luxury Retail Experience', category: 'E-commerce', image: '/case-study-ecommerce.jpg' },
+      { id: 2, title: 'B2B Wholesale Platform', category: 'E-commerce', image: '/project-trading.jpg' }
+    ],
+    process: [
+      { step: 1, title: 'Strategy', description: 'Define market approach and commerce goals' },
+      { step: 2, title: 'Design', description: 'Create high-conversion user interfaces' },
+      { step: 3, title: 'Implementation', description: 'Build and integrate the commerce engine' },
+      { step: 4, title: 'Launch', description: 'Deployment, testing, and growth monitoring' }
+    ]
+  },
+  'seo-growth': {
+    title: 'SEO & Growth',
+    subtitle: 'Organic visibility & conversion performance',
+    description: 'Technical SEO and digital marketing strategies to increase your business reach and conversion efficiency. We combine code audits with strategic content to drive sustainable organic growth.',
+    image: '/service-strategy.jpg',
+    whyMatters: 'A beautiful site doesn\'t matter if no one finds it. In an increasingly crowded digital landscape, organic visibility is the most sustainable way to grow your business over time, reducing reliance on paid acquisition.',
+    benefits: [
+      { title: 'Technical SEO', description: 'Optimizing code and site structure for search engines' },
+      { title: 'Organic Content', description: 'Building authority through strategic, valuable content' },
+      { title: 'Performance Audits', description: 'Continuous monitoring of Core Web Vitals and SEO health' },
+      { title: 'Keyword Optimization', description: 'Targeting high-intent traffic for maximum ROI' },
+      { title: 'Analytics Growth', description: 'Data-driven insights to refine marketing strategies' },
+      { title: 'Technical Integrity', description: 'Ensuring your system is indexed and ranked correctly' }
+    ],
+    caseStudies: [
+      { id: 1, title: 'Organic Reach Campaign', category: 'Growth', image: '/project-landing-page.jpg' },
+      { id: 2, title: 'Technical SEO Overhaul', category: 'Growth', image: '/project-1.jpg' }
+    ],
+    process: [
+      { step: 1, title: 'Audit', description: 'Thorough analysis of current SEO and market standing' },
+      { step: 2, title: 'Strategy', description: 'Create a roadmap for visibility and acquisition' },
+      { step: 3, title: 'Implementation', description: 'Technical fixes and content creation' },
+      { step: 4, title: 'Optimization', description: 'Continuous testing and iterative refinement' }
+    ]
+  },
+  'ai-automation': {
+    title: 'AI Integration & Automation',
+    subtitle: 'Modernizing business workflows with intelligence',
+    description: 'Leveraging modern AI and automation to reduce costs and improve efficiency. We build custom agents and intelligent process designs that automate repetitive tasks, allowing your team to focus on high-value strategy.',
+    image: '/case-study-saas.jpg',
+    whyMatters: 'AI is no longer optional in the modern enterprise. Automating workflows and using intelligent agents allows organizations to scale rapidly while maintaining precision and reducing operational overhead.',
+    benefits: [
+      { title: 'Cost Reduction', description: 'Lower operational costs through automated processes' },
+      { title: 'Workflow Speed', description: 'Rapid execution of complex, repetitive tasks' },
+      { title: 'Intelligent Agents', description: 'Custom LLM implementations for specific business needs' },
+      { title: 'Data Insights', description: 'AI-driven analysis of business and user data' },
+      { title: '24/7 Availability', description: 'Always-on automated systems and user support' },
+      { title: 'Future-Proofing', description: 'Building your business on the cutting edge of tech' }
+    ],
+    caseStudies: [
+      { id: 1, title: 'Intelligent Agent Deployment', category: 'AI', image: '/project-admin-system.jpg' },
+      { id: 2, title: 'Workflow Automation Suite', category: 'Automation', image: '/project-2.jpg' }
+    ],
+    process: [
+      { step: 1, title: 'Assessment', description: 'Identify automation opportunities and AI use cases' },
+      { step: 2, title: 'Design', description: 'Architect custom agents and automated flows' },
+      { step: 3, title: 'Integration', description: 'Connect AI systems to your existing codebase' },
+      { step: 4, title: 'Governance', description: 'Monitoring, safety checks, and performance tuning' }
+    ]
+  },
+  'maintenance': {
+    title: 'Maintenance & Support',
+    subtitle: 'Ongoing technical partnership for long-term stability',
+    description: 'Reliable long-term support to ensure your digital systems remain stable, secure, and performant. We provide proactive monitoring, security updates, and incremental improvements as your business continues to grow.',
+    image: '/service-web-dev.jpg',
+    whyMatters: 'Digital products are living systems. Without regular updates, security monitoring, and performance tuning, systems degrade over time. We act as your technical partner to protect and enhance your investment.',
+    benefits: [
+      { title: 'Proactive Monitoring', description: 'Detect and resolve issues before they affect users' },
+      { title: 'Security Updates', description: 'Ongoing protection against new vulnerabilities' },
+      { title: 'Performance Tuning', description: 'Keeping your system fast and responsive continuously' },
+      { title: 'Uptime Guarantee', description: 'Ensuring your digital presence is always available' },
+      { title: 'Technical Support', description: 'Direct access to expert developers for questions' },
+      { title: 'Incremental Growth', description: 'Continuous small feature additions and improvements' }
+    ],
+    caseStudies: [
+      { id: 1, title: 'Global Platform Maintenance', category: 'Support', image: '/project-business-platform.jpg' },
+      { id: 2, title: 'System Security Hardening', category: 'Security', image: '/project-3.jpg' }
+    ],
+    process: [
+      { step: 1, title: 'Onboarding', description: 'Audit current systems and establish protocol' },
+      { step: 2, title: 'Setup', description: 'Configure monitoring and reporting tools' },
+      { step: 3, title: 'Execution', description: 'Ongoing updates, fixes, and optimizations' },
+      { step: 4, title: 'Review', description: 'Regular reports on health and performance' }
     ]
   },
   'digital-strategy': {

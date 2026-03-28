@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Navbar } from '@/components/navbar'
-import { Footer } from '@/components/footer'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -48,8 +46,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      
       <main className="pt-32 pb-24">
         {/* Header Section */}
         <section className="mb-20 px-6 lg:px-8">
@@ -144,14 +140,16 @@ export default function ContactPage() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors appearance-none bg-background cursor-pointer"
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors appearance-none bg-background cursor-pointer text-sm font-medium"
                 >
-                  <option value="web-development">Web Development</option>
+                  <option value="web-development">Web Design & Development</option>
                   <option value="ui-ux-design">UI/UX Design</option>
-                  <option value="branding">Branding</option>
-                  <option value="digital-strategy">Digital Strategy</option>
-                  <option value="ai-integration">AI Integration</option>
-                  <option value="other">Other</option>
+                  <option value="branding">Branding & Identity</option>
+                  <option value="backend-api">Backend & API Development</option>
+                  <option value="ecommerce">E-commerce Solutions</option>
+                  <option value="seo-growth">SEO & Growth</option>
+                  <option value="ai-automation">AI Integration & Automation</option>
+                  <option value="maintenance">Maintenance & Support</option>
                 </select>
               </div>
 
@@ -167,7 +165,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors resize-none text-sm"
                   placeholder="Describe your project, goals, and timeline..."
                 />
               </div>
@@ -188,7 +186,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-foreground text-background font-medium rounded-full hover:shadow-md hover:opacity-90 disabled:opacity-50 transition-all duration-200 inline-flex items-center justify-center gap-2"
+                className="w-full px-6 py-4 bg-foreground text-background font-bold rounded-full hover:shadow-md hover:opacity-90 disabled:opacity-50 transition-all duration-200 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-widest"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 {!isSubmitting && <span>→</span>}
@@ -199,24 +197,72 @@ export default function ContactPage() {
             <div className="mt-16 pt-12 border-t border-border">
               <div className="grid sm:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider mb-2">Email</h3>
-                  <a href="mailto:hello@lumoratriad.com" className="text-lg hover:underline">
-                    hello@lumoratriad.com
+                  <h3 className="text-[10px] font-black uppercase tracking-widest mb-4 opacity-40">Direct Email</h3>
+                  <a href="mailto:lumoratriad@gmail.com" className="text-xl font-bold hover:underline tracking-tight">
+                    lumoratriad@gmail.com
                   </a>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider mb-2">Phone</h3>
-                  <a href="tel:+919876543210" className="text-lg hover:underline">
-                    +91 9876 543 210
+                  <h3 className="text-[10px] font-black uppercase tracking-widest mb-4 opacity-40">Direct Lines</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <a href="tel:+919947878418" className="text-xl font-bold hover:underline tracking-tight block">
+                        +91 99478 78418 <span className="text-xs font-normal opacity-50 ml-2">(Main)</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+919847439125" className="text-sm font-semibold hover:underline block opacity-70">
+                        +91 98474 39125
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+971555973832" className="text-sm font-semibold hover:underline block opacity-70">
+                        +971 55 597 3832 <span className="text-[10px] uppercase ml-1 opacity-50">(UAE)</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+918891301669" className="text-sm font-semibold hover:underline block opacity-70">
+                        +91 88913 01669
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-black mb-4">Twitter</p>
+                  <a href="https://x.com/LumoraTraid" target="_blank" rel="noopener noreferrer" className="text-sm font-bold hover:opacity-60 transition-opacity uppercase tracking-widest">
+                    Follow X →
                   </a>
                 </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-black mb-4">LinkedIn</p>
+                  <a href="https://www.linkedin.com/in/lumoratriad/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold hover:opacity-60 transition-opacity uppercase tracking-widest">
+                    Connect →
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-black mb-4">Instagram</p>
+                  <a href="https://www.instagram.com/lumo.ratraid/?hl=en" target="_blank" rel="noopener noreferrer" className="text-sm font-bold hover:opacity-60 transition-opacity uppercase tracking-widest">
+                    Stories →
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-black mb-4">Facebook</p>
+                  <a href="https://www.facebook.com/profile.php?id=61586286665509" target="_blank" rel="noopener noreferrer" className="text-sm font-bold hover:opacity-60 transition-opacity uppercase tracking-widest">
+                    Update →
+                  </a>
+                </div>
+              </div>
+              <div className="mt-12 space-y-1">
+                <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-black">Studio</p>
+                <p className="text-sm font-medium">Remote / India / UAE / Global</p>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />
     </div>
   )
 }

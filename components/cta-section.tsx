@@ -32,12 +32,12 @@ export function CTASection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-6xl lg:text-8xl font-bold leading-tight mb-8 max-w-5xl mx-auto text-balance">
-            Let&apos;s build something exceptional.
+          <h2 className="text-6xl lg:text-8xl font-bold leading-tight mb-8 max-w-5xl mx-auto text-balance tracking-tighter">
+            Let&apos;s build something that looks premium and performs at scale.
           </h2>
 
           <p className="text-lg lg:text-xl text-background/80 font-light mb-16 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your digital presence? Let&apos;s discuss how we can build a product that scales.
+            Ready to evolve your digital presence? We bridge the gap between design and high-performance engineering.
           </p>
 
           {/* CTA Buttons */}
