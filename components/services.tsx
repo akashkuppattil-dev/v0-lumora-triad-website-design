@@ -6,16 +6,16 @@ import { useEffect, useRef, useState } from 'react'
 const SERVICES = [
   {
     title: 'Web Design & Development',
-    description: 'High-performance, responsive systems with modern UI/UX architecture and scalable backend integration.',
+    description: 'Fast, responsive websites and web apps built with modern frontend frameworks. Designed to load quickly, look sharp, and convert.',
     image: '/service-web-development-showcase.jpg',
-    includes: ['Next.js architecture', 'Core Web Vitals optimization', 'Custom API integration'],
+    includes: ['Next.js & React', 'Mobile-first design', 'CMS integration'],
     slug: 'web-development'
   },
   {
     title: 'UI/UX Design',
-    description: 'Creating intuitive, beautiful digital experiences focusing on conversion-centered design and accessibility.',
+    description: 'Clean, intuitive interfaces designed to build trust and drive action. From wireframes to production-ready Figma files.',
     image: '/service-ui-design-showcase.jpg',
-    includes: ['Design systems (Figma)', 'Interactive prototyping', 'Accessibility audits'],
+    includes: ['Figma design systems', 'User flow mapping', 'Responsive prototyping'],
     slug: 'ui-ux-design'
   },
   {
@@ -27,16 +27,16 @@ const SERVICES = [
   },
   {
     title: 'Backend & API Development',
-    description: 'Robust, secure, and highly-performant server-side solutions for complex data orchestration.',
+    description: 'Custom server-side logic, REST APIs, and database architecture for web apps that need more than a frontend.',
     image: '/project-admin-system.jpg',
-    includes: ['Database architecture', 'Microservices logic', 'Enterprise security'],
+    includes: ['Django & Node.js', 'REST API design', 'Postgres & cloud DB'],
     slug: 'backend-api'
   },
   {
     title: 'E-commerce Solutions',
-    description: 'Scalable commerce experiences designed for maximum conversion and mobile-first efficiency.',
+    description: 'Conversion-focused online stores built for clarity and ease of purchase on any device.',
     image: '/case-study-ecommerce.jpg',
-    includes: ['Checkout optimization', 'Inventory automation', 'Payment orchestration'],
+    includes: ['Product & checkout UX', 'Payment gateway setup', 'Inventory management'],
     slug: 'ecommerce'
   },
   {
@@ -48,16 +48,16 @@ const SERVICES = [
   },
   {
     title: 'AI Integration & Automation',
-    description: 'Harnessing the power of LLMs and custom agents to modernize your business workflows.',
+    description: 'Adding smart automation and AI-powered features to existing products and workflows.',
     image: '/case-study-saas.jpg',
-    includes: ['Custom LLM agents', 'Process automation scripts', 'Intelligent UX'],
+    includes: ['Chatbot & assistant builds', 'Workflow automation', 'API-connected AI tools'],
     slug: 'ai-automation'
   },
   {
     title: 'Maintenance & Support',
-    description: 'Ongoing technical stewardship for critical systems requiring high uptime and security.',
+    description: 'Ongoing updates, bug fixes, and performance improvements so your site keeps running smoothly.',
     image: '/service-web-dev.jpg',
-    includes: ['24/7 technical monitoring', 'Security patching', 'Performance tuning'],
+    includes: ['Monthly update plans', 'Bug fixes & patches', 'Performance checks'],
     slug: 'maintenance'
   }
 ]

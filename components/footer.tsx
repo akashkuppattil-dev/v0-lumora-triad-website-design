@@ -98,24 +98,23 @@ export function Footer() {
             <h4 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
               Start a project
             </h4>
-            <div className="space-y-6">
-              <a href="mailto:lumoratriad@gmail.com" className="text-lg font-bold text-background hover:text-background/80 transition-colors block">
+            <div className="space-y-5">
+              <p className="text-xs text-background/40 leading-relaxed max-w-[200px]">
+                Tell us about your project. We respond within 24 hours.
+              </p>
+              <a href="mailto:lumoratriad@gmail.com" className="text-base font-bold text-background hover:text-background/80 transition-colors block">
                 lumoratriad@gmail.com
               </a>
-              <div className="space-y-2">
-                <a href="tel:+919947878418" className="text-sm font-semibold text-background/60 hover:text-background transition-colors block italic">
-                  +91 99478 78418 (Main)
-                </a>
-                <a href="tel:+919847439125" className="text-xs text-background/40 hover:text-background transition-colors block">
-                  +91 98474 39125
-                </a>
-                <a href="tel:+971555973832" className="text-xs text-background/40 hover:text-background transition-colors block">
-                  +971 55 597 3832 (UAE)
-                </a>
-                <a href="tel:+918891301669" className="text-xs text-background/40 hover:text-background transition-colors block">
-                  +91 88913 01669
-                </a>
-              </div>
+              <a href="tel:+919947878418" className="text-sm font-semibold text-background/60 hover:text-background transition-colors block">
+                +91 99478 78418
+              </a>
+              <a
+                href="mailto:lumoratriad@gmail.com"
+                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-background border border-background/30 rounded-full px-5 py-2.5 hover:bg-background hover:text-foreground transition-all duration-300 group mt-2"
+              >
+                Send a message
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
             </div>
           </div>
         </div>

@@ -42,26 +42,30 @@ export function About() {
 
           {/* Main Statement */}
           <div className="mb-20">
-            <h2 className="text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.9] max-w-5xl mb-16 text-balance tracking-tighter">
-              A digital studio at the intersection of design and engineering.
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.9] max-w-4xl mb-16 text-balance tracking-tighter">
+              A premium web & product studio. Small team, sharp execution.
             </h2>
 
             <div className="grid md:grid-cols-2 gap-16">
-              <p className="text-base sm:text-xl text-muted-foreground font-normal leading-relaxed max-w-lg">
-                Lumora Triad is a modern digital studio focused on building high-performance web systems. We partner with growing businesses to bridge the gap between complex engineering and premium design.
+              <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
+                Lumora Triad is a focused web and design studio based in India, working with early-stage startups, growing brands, and local businesses that need a credible online presence built properly — not templated.
               </p>
               <div className="space-y-8">
-                <p className="text-base sm:text-xl text-muted-foreground font-normal leading-relaxed max-w-lg">
-                  Our approach is rooted in clarity and technical precision. We don't just build websites; we architect digital infrastructure that supports scale and long-term growth.
+                <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
+                  We handle every layer — from UI design and frontend engineering to custom backends and API integrations. One team, end-to-end ownership, and real communication throughout.
                 </p>
-                <div className="pt-8 flex items-center gap-12 border-t border-border">
+                <div className="pt-8 flex flex-wrap items-center gap-12 border-t border-border">
                   <div>
                     <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Core Stack</span>
-                    <span className="text-sm font-medium">React / Next.js / Django</span>
+                    <span className="text-sm font-medium">React · Next.js · Django · Postgres</span>
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Location</span>
-                    <span className="text-sm font-medium">Remote / India</span>
+                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Based In</span>
+                    <span className="text-sm font-medium">Kerala, India — Remote Worldwide</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Studio Type</span>
+                    <span className="text-sm font-medium">Boutique · End-to-End</span>
                   </div>
                 </div>
               </div>
