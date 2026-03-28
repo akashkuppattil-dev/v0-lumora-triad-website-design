@@ -1,6 +1,7 @@
 'use client'
 
-
+import Link from 'next/link'
+import Image from 'next/image'
 
 const PROJECTS = [
   {
@@ -133,11 +134,11 @@ export default function WorkPage() {
                       {/* Technical Breakdown */}
                       <div className="grid sm:grid-cols-2 gap-10 pt-10 border-t border-border/50">
                         <div>
-                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-4">Challenge</h4>
+                          <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-4">Challenge</h3>
                           <p className="text-sm font-medium leading-relaxed">{project.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-4">Our Solution</h4>
+                          <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-4">Our Solution</h3>
                           <p className="text-sm font-medium leading-relaxed">{project.solution}</p>
                         </div>
                       </div>
@@ -160,10 +161,12 @@ export default function WorkPage() {
                     {/* Immersive Image Display */}
                     <div className={`relative ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                       <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[700px] w-full rounded-2xl lg:rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-2xl transition-all duration-700 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)]">
-                        <img
+                        <Image
                           src={projectImg}
-                          alt={project.title}
+                          alt={`${project.title} — ${project.category} case study by Lumora Triad`}
+                          fill
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                         {/* Interactive Highlight */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

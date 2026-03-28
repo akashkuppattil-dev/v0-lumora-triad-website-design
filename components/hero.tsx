@@ -38,13 +38,15 @@ export function Hero() {
           }`}
       >
         <div className="mx-3 sm:mx-6 lg:mx-10">
-          {/* Natural-size image — no fixed aspect ratio = no letterboxing */}
-          <img
+          {/* Using Next.js Image for automatic WebP/AVIF conversion and CLS prevention */}
+          <Image
             src="/hero-lumora-display.jpg"
-            alt="Lumora Triad — Web design and engineering studio"
+            alt="Lumora Triad — Web design and engineering studio showcasing premium web design work"
+            width={1400}
+            height={900}
+            priority
             className="w-full h-auto rounded-xl sm:rounded-2xl lg:rounded-3xl border border-border/40 shadow-[0_20px_60px_rgba(0,0,0,0.1)]"
-            fetchPriority="high"
-            decoding="async"
+            sizes="(max-width: 640px) calc(100vw - 24px), (max-width: 1024px) calc(100vw - 48px), calc(100vw - 80px)"
           />
         </div>
       </div>

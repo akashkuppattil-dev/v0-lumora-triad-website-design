@@ -37,9 +37,9 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div>
-            <h4 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
+            <h3 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
               Navigation
-            </h4>
+            </h3>
             <ul className="space-y-4">
               <li>
                 <Link href="/work" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
@@ -66,9 +66,9 @@ export function Footer() {
 
           {/* Services Links */}
           <div className="col-span-1">
-            <h4 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
+            <h3 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
               Capabilities
-            </h4>
+            </h3>
             <ul className="grid grid-cols-1 gap-4">
               <li>
                 <Link href="/services/web-development" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
@@ -95,9 +95,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
+            <h3 className="text-[10px] font-black uppercase tracking-widest mb-8 text-background/30">
               Start a project
-            </h4>
+            </h3>
             <div className="space-y-5">
               <p className="text-xs text-background/40 leading-relaxed max-w-[200px]">
                 Tell us about your project. We respond within 24 hours.

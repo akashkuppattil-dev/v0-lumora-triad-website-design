@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 const SERVICES_DETAILED = [
   {
@@ -173,7 +174,14 @@ export default function ServicesPage() {
                       pattern === 1 ? 'lg:order-1' :
                       pattern === 2 ? 'lg:order-3' : 'lg:order-2'
                     }`}>
-                      <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
+                      <Image
+                        src={service.image}
+                        alt={`${service.title} — ${service.subtitle} by Lumora Triad`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                        sizes="(max-width: 1024px) 0px, 33vw"
+                        loading="lazy"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
                     <div className={`${
@@ -203,7 +211,14 @@ export default function ServicesPage() {
 
                     {/* Image */}
                     <div className="relative h-48 w-full rounded-2xl overflow-hidden border border-border bg-secondary">
-                      <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                      <Image
+                        src={service.image}
+                        alt={`${service.title} — ${service.subtitle} by Lumora Triad`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) calc(100vw - 32px), 0px"
+                        loading="lazy"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
 

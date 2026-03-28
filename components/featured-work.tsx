@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const PROJECTS = [
   {
@@ -95,10 +96,13 @@ export function FeaturedWork() {
               >
                 {/* Immersive Full-Width Image Container */}
                 <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] rounded-2xl lg:rounded-[2.5rem] overflow-hidden border border-border bg-secondary shadow-lg group-hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.25)] transition-all duration-1000">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — ${project.category} case study by Lumora Triad`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                    loading="lazy"
                   />
                   {/* Layered Content Overlay (Subtle) */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

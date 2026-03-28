@@ -278,10 +278,13 @@ export default function ServiceDetailPage() {
             {/* Right Image */}
             <div className="order-1 lg:order-2">
               <div className="relative h-80 sm:h-96 lg:h-[500px] rounded-2xl overflow-hidden border border-border">
-                <img
+                <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} — ${service.subtitle} by Lumora Triad`}
+                  fill
+                  priority
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -357,10 +360,13 @@ export default function ServiceDetailPage() {
                 className="group block"
               >
                 <div className="relative h-96 rounded-xl overflow-hidden border border-border mb-6 group-hover:border-foreground transition-colors">
-                  <img
+                  <Image
                     src={study.image}
-                    alt={study.title}
+                    alt={`${study.title} — Case study for ${service.title}`}
+                    fill
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                   />
                 </div>
                 <div className="space-y-2">

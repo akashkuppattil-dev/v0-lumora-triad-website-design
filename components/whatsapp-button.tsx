@@ -111,8 +111,9 @@ export function WhatsAppButton() {
           <button
             onClick={() => setIsExpanded(false)}
             className="text-white/70 hover:text-white transition-colors p-1"
+            aria-label="Close WhatsApp chat"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" aria-hidden="true" />
           </button>
         </div>
 

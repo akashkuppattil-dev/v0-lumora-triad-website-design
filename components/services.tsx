@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 const SERVICES = [
   {
@@ -166,10 +167,13 @@ export function Services() {
                   {/* Image */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'} relative group`}>
                     <div className="relative h-[600px] w-full overflow-hidden rounded-2xl border border-border bg-secondary shadow-2xl transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)]">
-                      <img
+                      <Image
                         src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        alt={`${service.title} service by Lumora Triad`}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                        sizes="(max-width: 1024px) 0px, 50vw"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
@@ -195,10 +199,13 @@ export function Services() {
                   {/* 2. Image */}
                   <div className="relative group">
                     <div className="relative h-[260px] w-full overflow-hidden rounded-2xl border border-border bg-secondary shadow-xl">
-                      <img
+                      <Image
                         src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        alt={`${service.title} service by Lumora Triad`}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        sizes="(max-width: 1024px) calc(100vw - 32px), 0px"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>

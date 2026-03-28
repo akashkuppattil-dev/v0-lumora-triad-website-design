@@ -16,15 +16,24 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lumoratriad.in'),
   title: 'Lumora Triad | Premium Web Development & Digital Solutions',
-  description: 'We build digital systems that scale businesses. Web development, UI/UX design, branding, and AI integrations for modern enterprises.',
+  description: 'We build digital products that look credible and move fast. Web design, UI/UX, branding, and AI integrations for startups and growing brands in India.',
   icons: {
     icon: '/company-logo.png',
     apple: '/company-logo.png',
   },
   openGraph: {
-    title: 'Lumora Triad Digital Agency',
-    description: 'Engineering the premium web. We build digital systems that scale.',
+    title: 'Lumora Triad | Premium Web & Product Studio',
+    description: 'Design, engineering, and delivery under one roof. We work with startups and growing brands — end-to-end, no hand-offs, no excuses.',
     images: ['/company-logo.png'],
+    type: 'website',
+    locale: 'en_IN',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://www.lumoratriad.in',
   },
 }
 

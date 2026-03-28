@@ -16,7 +16,7 @@
   --secondary: oklch(0.968 0.003 265);     /* #F5F5F7 - Apple lite shade (navbar/footer) */
   --secondary-foreground: oklch(0.21 0.008 265);
   --muted: oklch(0.968 0.003 265);         /* #F5F5F7 - Muted section bg */
-  --muted-foreground: oklch(0.49 0.008 265); /* #6E6E73 - Apple secondary text */
+  --muted-foreground: oklch(0.42 0.008 265); /* #6E6E73 improved - Apple secondary text, better contrast */
   --accent: oklch(0.968 0.003 265);
   --accent-foreground: oklch(0.21 0.008 265);
   --destructive: oklch(0.5 0.18 25);
