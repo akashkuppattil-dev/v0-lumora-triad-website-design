@@ -27,7 +27,7 @@ const PROJECTS = [
     title: 'FinTech Ecosystem',
     category: 'Product Engineering',
     outcome: 'Enterprise-grade financial dashboard with real-time transaction processing.',
-    image: '/case-study-fintech.jpg'
+    image: '/service-backend-v2.png'
   },
   {
     title: 'SaaS Dashboard',

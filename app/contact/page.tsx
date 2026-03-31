@@ -7,6 +7,7 @@ export default function ContactPage() {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
     company: '',
     message: '',
     service: 'web-development'
@@ -23,21 +24,34 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
       setSubmitStatus('success')
       setFormData({
         firstName: '',
         lastName: '',
         email: '',
+        phone: '',
         company: '',
         message: '',
         service: 'web-development'
       })
-      setTimeout(() => setSubmitStatus('idle'), 3000)
+      // No immediate timeout so the user can read the nice response
     } catch (error) {
+      console.error('Submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -98,20 +112,37 @@ export default function ContactPage() {
               </div>
 
               {/* Email Field */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors"
-                  placeholder="john@example.com"
-                />
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    Phone number / WhatsApp
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-foreground transition-colors"
+                    placeholder="+91 00000 00000"
+                  />
+                </div>
               </div>
 
               {/* Company Field */}
@@ -150,6 +181,7 @@ export default function ContactPage() {
                   <option value="seo-growth">SEO & Growth</option>
                   <option value="ai-automation">AI Integration & Automation</option>
                   <option value="maintenance">Maintenance & Support</option>
+                  <option value="general-inquiry">Just an inquiry</option>
                 </select>
               </div>
 
@@ -172,13 +204,28 @@ export default function ContactPage() {
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                  <p className="font-medium">Thank you! We'll be in touch soon.</p>
+                <div className="p-8 bg-green-50/50 border border-green-200/50 rounded-2xl text-green-900 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-green-500 text-white p-2 rounded-full mt-1">
+                      <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.42-6.447a.247.247 0 0 0-.001-.001Z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Thank you! Your message has been sent.</h3>
+                      <p className="text-sm opacity-80 leading-relaxed max-w-lg">
+                        We've received your inquiry and our team is already reviewing it. 
+                        <strong> We will contact you via WhatsApp or a direct call within the next 24 hours </strong>
+                        to discuss your project further.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
               {submitStatus === 'error' && (
-                <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                  <p className="font-medium">Something went wrong. Please try again.</p>
+                <div className="p-8 bg-red-50/50 border border-red-200/50 rounded-2xl text-red-900">
+                  <p className="font-bold mb-1">Message Failed</p>
+                  <p className="text-sm opacity-80">Something went wrong while sending your message. Please try again or email us directly.</p>
                 </div>
               )}
 

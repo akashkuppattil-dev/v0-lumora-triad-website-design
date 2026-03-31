@@ -29,7 +29,7 @@ const SERVICES = [
   {
     title: 'Backend & API Development',
     description: 'Custom server-side logic, REST APIs, and database architecture for web apps that need more than a frontend.',
-    image: '/project-admin-system.jpg',
+    image: '/service-backend-v2.png',
     includes: ['Django & Node.js', 'REST API design', 'Postgres & cloud DB'],
     slug: 'backend-api'
   },

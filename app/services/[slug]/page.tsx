@@ -85,7 +85,7 @@ const SERVICE_DATA = {
     title: 'Backend & API Development',
     subtitle: 'Robust, secure server-side logic and system communication',
     description: 'We architect and build scalable server-side solutions and integrations. Focused on data integrity, security, and high-performance system communication to power your complex digital workflows.',
-    image: '/project-admin-system.jpg',
+    image: '/service-backend-v2.png',
     whyMatters: 'Behind every great interface is a powerful backend. Slow APIs or insecure databases can cripple even the best-looking products. We build the engine that powers your business, ensuring performance and stability under load.',
     benefits: [
       { title: 'Data Integrity', description: 'Robust database structures ensuring information accuracy' },
@@ -95,8 +95,8 @@ const SERVICE_DATA = {
       { title: 'Scalability', description: 'Backends designed to handle growing user volumes' },
       { title: 'Documentation', description: 'Clear API documentation for developer accessibility' }
     ],
-    caseStudies: [
-      { id: 1, title: 'FinTech API Infrastructure', category: 'Backend', image: '/case-study-fintech.jpg' },
+        caseStudies: [
+          { id: 4, title: 'FinTech API Infrastructure', category: 'Backend', image: '/service-backend-v2.png' },
       { id: 2, title: 'Enterprise Resource System', category: 'Backend', image: '/project-business-platform.jpg' }
     ],
     process: [

@@ -58,7 +58,7 @@ const PROJECTS = [
     category: 'Product Engineering',
     year: '2024',
     description: 'Enterprise-grade financial dashboard with real-time transaction processing.',
-    image: '/case-study-fintech.jpg',
+    image: '/service-backend-v2.png',
     details: 'Transformed a legacy banking platform into a modern, secure fintech solution. Implemented real-time transaction processing and an intuitive dashboard.',
     challenge: 'Outdated UX and performance bottlenecks were affecting critical financial operations.',
     solution: 'Rebuilt with a modern tech stack and high-performance real-time data streaming to ensure accuracy and speed.',
@@ -153,9 +153,13 @@ export default function WorkPage() {
                         ))}
                       </div>
 
-                      <button aria-label={`Deep dive into ${project.title} case study`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest border-b-2 border-foreground/20 pb-2 group-hover:border-foreground group-hover:gap-4 transition-all">
+                      <Link 
+                        href={`/work/${project.id === 1 ? 'hexamech' : project.id === 2 ? 'basic-trading' : project.id === 3 ? 'ecommerce-luxury' : project.id === 4 ? 'fintech-ecosystem' : 'saas-dashboard'}`}
+                        aria-label={`Deep dive into ${project.title} case study`} 
+                        className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest border-b-2 border-foreground/20 pb-2 hover:border-foreground hover:gap-4 transition-all"
+                      >
                         Deep dive into case study <span aria-hidden="true">→</span>
-                      </button>
+                      </Link>
                     </div>
 
                     {/* Immersive Image Display */}

@@ -28,9 +28,8 @@ export function CTASection() {
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
-          className={`text-center transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 max-w-4xl mx-auto text-balance tracking-tighter">
             Have a project in mind? Let&apos;s talk.

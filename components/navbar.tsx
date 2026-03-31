@@ -93,13 +93,11 @@ export function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-        isVisible ? 'translate-y-0' : '-translate-y-full opacity-0'
-      } ${
-        isScrolled
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isVisible ? 'translate-y-0' : '-translate-y-full opacity-0'
+        } ${isScrolled
           ? 'bg-background/90 backdrop-blur-2xl border-b border-border shadow-sm py-4'
           : 'bg-transparent border-b border-transparent py-6'
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Brand Logo */}
@@ -107,8 +105,8 @@ export function Navbar() {
               <div className="relative w-8 h-8 sm:w-10 sm:h-10 overflow-hidden rounded-full border border-border shadow-sm">
                 <Image src="/company-logo.png" alt="Lumora Triad" width={40} height={40} className="object-cover rounded-full" />
               </div>
-              <span className="text-xl sm:text-2xl font-bold tracking-tight hidden sm:block mt-1">
-                Lumora<span className="font-light">.Triad</span>
+              <span suppressHydrationWarning className="text-xl sm:text-2xl font-bold tracking-tight hidden sm:block mt-1">
+                {"Lumora"}&nbsp;<span className="font-light tracking-widest uppercase opacity-70">{"Triad"}</span>
               </span>
             </Link>
 
@@ -154,16 +152,14 @@ export function Navbar() {
       </nav>
 
       {/* Full-Screen Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-[99] md:hidden transition-all duration-500 ${
-        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-      }`}>
+      <div className={`fixed inset-0 z-[99] md:hidden transition-all duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}>
         {/* Backdrop */}
         <div className="absolute inset-0 bg-background/98 backdrop-blur-2xl" onClick={() => setIsOpen(false)} />
 
         {/* Menu Content */}
-        <div className={`relative h-full flex flex-col pt-28 pb-10 px-6 overflow-y-auto transition-all duration-500 ${
-          isOpen ? 'translate-y-0' : 'translate-y-8'
-        }`}>
+        <div className={`relative h-full flex flex-col pt-28 pb-10 px-6 overflow-y-auto transition-all duration-500 ${isOpen ? 'translate-y-0' : 'translate-y-8'
+          }`}>
 
           {/* Nav Links */}
           <div className="flex flex-col gap-2 mb-10">

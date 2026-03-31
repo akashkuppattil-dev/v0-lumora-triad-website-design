@@ -1,3 +1,8 @@
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { LucideQuote, LucideUsers2, LucideGlobe2, LucideHistory } from 'lucide-react'
 
 export default function AboutPage() {
   return (
@@ -5,39 +10,40 @@ export default function AboutPage() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         {/* Editorial Title */}
         <section className="mb-10 lg:mb-32">
-          <h1 className="text-5xl sm:text-7xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-6 lg:mb-16">
-            LUMORA<br/>TRIAD.
+          <h1 className="text-5xl sm:text-7xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-6 lg:mb-16 uppercase">
+            The Studio.
           </h1>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
             <div className="space-y-6 lg:space-y-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
-                Our philosophy is simple: bridge the gap between complex engineering and premium design.
+              <h2 className="text-3xl lg:text-6xl font-bold leading-[0.95] tracking-tighter uppercase">
+                We bridge the gap between complex engineering and premium design.
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                In a digital landscape filled with generic templates and high-friction interfaces, Lumora Triad was founded to provide a balanced approach. We architect systems that are as technically stable as they are visually compelling.
+              <p className="text-xl text-muted-foreground leading-relaxed font-normal max-w-xl italic">
+                "In a landscape of generic templates, we offer technical precision and high-end aesthetics."
               </p>
             </div>
             <div className="flex items-end justify-end">
               <div className="max-w-md space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We are a remote-first studio based in India, operating globally. We partner with founders and product teams who value clarity, technical precision, and high-end aesthetics.
+                  Lumora Triad was founded with a singular purpose: to provide startups and enterprise leaders with a direct, collaborative pathway to production-ready digital products. No bloated account layers, no hand-off friction.
                 </p>
                 <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border">
                   <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-50">Stack</span>
-                    <ul className="text-sm font-medium space-y-1">
-                      <li>React / Next.js</li>
+                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-30">Our Stack</span>
+                    <ul className="text-xs font-bold space-y-2 uppercase tracking-wide">
+                      <li>Next.js / React</li>
                       <li>Django / Python</li>
-                      <li>PostgreSQL</li>
-                      <li>TypeScript</li>
+                      <li>Cloud Infrastructure</li>
+                      <li>Technical SEO</li>
                     </ul>
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-50">Studio</span>
-                    <ul className="text-sm font-medium space-y-1">
-                      <li>Remote</li>
-                      <li>India-based</li>
+                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-30">Status</span>
+                    <ul className="text-xs font-bold space-y-2 uppercase tracking-wide">
                       <li>Est. 2024</li>
+                      <li>Global Remote</li>
+                      <li>Boutique Scale</li>
+                      <li>Q2 2026 Intake</li>
                     </ul>
                   </div>
                 </div>
@@ -46,84 +52,108 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Approach Section */}
-        <section className="py-12 lg:py-32 border-t border-border">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-24">
+        {/* The Circle - Team/Founder Story */}
+        <section className="py-24 lg:py-48 border-t border-border">
+          <div className="max-w-4xl mx-auto mb-24 lg:mb-32">
+            <div className="flex items-center gap-3 mb-8 opacity-40">
+              <LucideHistory size={16} />
+              <span className="text-xs font-black uppercase tracking-[0.2em]">Origin Story</span>
+            </div>
+            <h2 className="text-4xl lg:text-7xl font-bold tracking-tighter uppercase mb-12">The Circle of Creators.</h2>
+            <div className="space-y-12 text-xl lg:text-2xl text-muted-foreground leading-relaxed font-normal">
+              <p>
+                What started as a small collaboration between three engineers and a designer in Kerala, India, has evolved into a specialized studio that serves clients from London to Dubai and New York.
+              </p>
+              <p className="text-foreground font-bold">
+                Lumora Triad isn&apos;t just a company—it&apos;s a methodology. We believe that the best products are built when the person designing the experience understands the architecture beneath it.
+              </p>
+              <p>
+                Our core team (The "Triad") focuses on three pillars: **Design Intelligence**, **Architectural Integrity**, and **Delivery Velocity**. We remain a small, boutique circle to ensure that every project we touch receives elite technical attention.
+              </p>
+            </div>
+          </div>
+
+          {/* Team Snapshot visual */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative group">
+               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
+                  <Image src="/service-ui-design-showcase.jpg" alt="Design Lead" fill className="object-cover" />
+               </div>
+               <div className="pt-6">
+                  <h4 className="text-lg font-bold uppercase tracking-tighter">Design Discipline</h4>
+                  <p className="text-xs font-black uppercase tracking-widest opacity-40">High-End Narratives</p>
+               </div>
+            </div>
+            <div className="relative group">
+               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
+                  <Image src="/service-backend-v2.png" alt="Engineering Lead" fill className="object-cover" />
+               </div>
+               <div className="pt-6">
+                  <h4 className="text-lg font-bold uppercase tracking-tighter">Engineering Lead</h4>
+                  <p className="text-xs font-black uppercase tracking-widest opacity-40">Robust Architecture</p>
+               </div>
+            </div>
+            <div className="relative group">
+               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
+                  <Image src="/service-strategy.jpg" alt="Product Lead" fill className="object-cover" />
+               </div>
+               <div className="pt-6">
+                  <h4 className="text-lg font-bold uppercase tracking-tighter">Growth & Strategy</h4>
+                  <p className="text-xs font-black uppercase tracking-widest opacity-40">Product Performance</p>
+               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Philosophy Section */}
+        <section className="py-24 lg:py-48 border-t border-border">
+          <div className="grid lg:grid-cols-3 gap-16 lg:gap-32">
             <div>
-              <span className="text-[10px] uppercase tracking-widest font-black opacity-40 mb-8 block">01 / Design</span>
-              <h3 className="text-3xl font-bold mb-6">User-Centric Systems</h3>
+              <div className="flex items-center gap-3 mb-8 opacity-40">
+                <LucideUsers2 size={16} />
+                <span className="text-[10px] uppercase tracking-widest font-black italic">Partnership</span>
+              </div>
+              <h3 className="text-3xl font-bold mb-6 uppercase tracking-tighter">No Middlemen.</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We don't just design interfaces; we design journeys. Every pixel is intentional, every interaction is purposeful. We focus on conversion, clarity, and brand consistency.
+                You work directly with the creators. We've eliminated account management layers to ensure that your vision is translated into code without any technical erosion.
               </p>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-widest font-black opacity-40 mb-8 block">02 / Engineering</span>
-              <h3 className="text-3xl font-bold mb-6">Built for Scale</h3>
+              <div className="flex items-center gap-3 mb-8 opacity-40">
+                <LucideGlobe2 size={16} />
+                <span className="text-[10px] uppercase tracking-widest font-black italic">Remote-First</span>
+              </div>
+              <h3 className="text-3xl font-bold mb-6 uppercase tracking-tighter">India to the World.</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Our code is our craft. We build with modern engines like Next.js and Django to ensure your platform is as robust on the backend as it is smooth on the frontend.
+                Operating out of Kerala, India, we bring a global perspective to local brands and a world-class technical standard to international enterprises.
               </p>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-widest font-black opacity-40 mb-8 block">03 / Partnership</span>
-              <h3 className="text-3xl font-bold mb-6">Direct Collaboration</h3>
+              <div className="flex items-center gap-3 mb-8 opacity-40">
+                <LucideQuote size={16} />
+                <span className="text-[10px] uppercase tracking-widest font-black italic">Principles</span>
+              </div>
+              <h3 className="text-3xl font-bold mb-6 uppercase tracking-tighter">OLED Editorial.</h3>
               <p className="text-muted-foreground leading-relaxed">
-                You work directly with the experts. No bloated account management layers. We act as an extension of your team to ensure your vision is realized at the highest level.
+                Our design aesthetic is grounded in the "OLED Editorial" philosophy—high contrast, deep blacks, and a focus on essential storytelling through high-end typography.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Tech Stack Visual - Minimal */}
-        <section className="py-12 lg:py-32 border-t border-border bg-foreground text-background -mx-4 lg:-mx-8 px-4 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl lg:text-7xl font-bold mb-10 lg:mb-24 tracking-tighter">Technology Stack.</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
-              {[
-                { label: 'Frontend', items: ['Next.js', 'React', 'Tailwind', 'Framermotion'] },
-                { label: 'Backend', items: ['Django', 'Python', 'Node.js', 'Go'] },
-                { label: 'Cloud', items: ['Vercel', 'AWS', 'Docker', 'PostgreSQL'] },
-                { label: 'Product', items: ['Figma', 'Linear', 'Github', 'Sentry'] }
-              ].map(stack => (
-                <div key={stack.label}>
-                  <span className="block text-[10px] uppercase tracking-widest font-black mb-6 opacity-40">{stack.label}</span>
-                  <ul className="space-y-4">
-                    {stack.items.map(item => (
-                      <li key={item} className="text-xl lg:text-2xl font-bold">{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Social / Connect */}
-        <section className="py-12 lg:py-32 border-t border-border">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
-            <div>
-              <h2 className="text-4xl lg:text-6xl font-black leading-tight tracking-tighter uppercase mb-6">Connect across the web.</h2>
-              <p className="text-lg text-muted-foreground max-w-md">We share case studies, technical insights, and studio updates across our platforms.</p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-8 lg:gap-x-12 lg:gap-y-16">
-              {[
-                { label: 'Twitter', url: 'https://x.com/LumoraTraid', action: 'Follow X' },
-                { label: 'LinkedIn', url: 'https://www.linkedin.com/in/lumoratriad/', action: 'Connect' },
-                { label: 'Instagram', url: 'https://www.instagram.com/lumo.ratraid/?hl=en', action: 'Stories' },
-                { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61586286665509', action: 'Update' }
-              ].map(social => (
-                <div key={social.label} className="group">
-                  <span className="block text-[10px] uppercase tracking-widest font-black mb-4 opacity-40">{social.label}</span>
-                  <a 
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-xl font-bold tracking-tight hover:underline flex items-center gap-2 group-hover:gap-4 transition-all"
-                  >
-                    {social.action}
-                    <span>→</span>
-                  </a>
-                </div>
-              ))}
-            </div>
+        {/* Global CTA */}
+        <section className="py-24 lg:py-48 border-t border-border bg-foreground text-background -mx-6 lg:-mx-8 px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-8xl font-black leading-[0.85] tracking-[ -0.05em] uppercase mb-12">
+              Let's join circles.
+            </h2>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center gap-4 px-12 py-6 bg-background text-foreground font-black rounded-full hover:scale-105 active:scale-95 transition-all duration-300 group text-sm uppercase tracking-widest"
+            >
+              Start Your Inquiry
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
           </div>
         </section>
       </div>

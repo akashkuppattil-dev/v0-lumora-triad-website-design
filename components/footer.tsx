@@ -22,8 +22,8 @@ export function Footer() {
                   className="object-cover rounded-full"
                 />
               </div>
-              <span className="text-xl sm:text-2xl font-bold tracking-tight text-background mt-1">
-                Lumora<span className="font-light text-background/60">.Triad</span>
+              <span suppressHydrationWarning className="text-xl sm:text-2xl font-bold tracking-tight text-background mt-1">
+                {"Lumora"}&nbsp;<span className="font-light text-background/60 tracking-widest uppercase">{"Triad"}</span>
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-background/60 font-medium leading-relaxed mb-8">
@@ -127,7 +127,7 @@ export function Footer() {
 
           {/* Social Links */}
           <div className="flex gap-6">
-            <a href="https://x.com/LumoraTraid" target="_blank" rel="noopener noreferrer" className="text-sm text-background/70 hover:text-background transition-colors">
+            <a href="https://x.com/LumoraTriad" target="_blank" rel="noopener noreferrer" className="text-sm text-background/70 hover:text-background transition-colors">
               Twitter
             </a>
             <a href="https://www.linkedin.com/in/lumoratriad/" target="_blank" rel="noopener noreferrer" className="text-sm text-background/70 hover:text-background transition-colors">
