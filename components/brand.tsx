@@ -8,8 +8,8 @@ export function Brand({ className = "" }: { className?: string }) {
 
   if (!mounted) {
     return (
-      <span className={`text-xl sm:text-2xl font-bold tracking-tight block mt-1 ${className}`}>
-        Lumora.Triad
+      <span className={`text-xl sm:text-2xl tracking-tight block mt-1 ${className}`}>
+        <span className="font-bold">Lumora</span>.Triad
       </span>
     )
   }
@@ -17,7 +17,7 @@ export function Brand({ className = "" }: { className?: string }) {
   return (
     <span className={`text-xl sm:text-2xl tracking-tight block mt-1 ${className}`}>
       <span className="font-bold">{"Lumora"}</span>
-      <span className="font-normal opacity-80">.{"Triad"}</span>
+      <span className="font-light opacity-80">.{"Triad"}</span>
     </span>
   )
 }
