@@ -1,7 +1,9 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Brand } from './brand'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -22,9 +24,7 @@ export function Footer() {
                   className="object-cover rounded-full"
                 />
               </div>
-              <span suppressHydrationWarning className="text-xl sm:text-2xl font-bold tracking-tight text-background mt-1">
-                {"Lumora"}&nbsp;<span className="font-light text-background/60 tracking-widest uppercase">{"Triad"}</span>
-              </span>
+              <Brand className="text-background" />
             </Link>
             <p className="text-xs sm:text-sm text-background/60 font-medium leading-relaxed mb-8">
               Designing and building modern web systems for growing businesses.

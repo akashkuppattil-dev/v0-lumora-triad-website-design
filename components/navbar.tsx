@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { Brand } from './brand'
 
 const SOCIAL_LINKS = [
   {
@@ -91,6 +92,7 @@ export function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
+
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isVisible ? 'translate-y-0' : '-translate-y-full opacity-0'
@@ -101,13 +103,20 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Brand Logo */}
-            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 hover:opacity-70 transition-opacity flex-shrink-0 z-[110] relative">
+            <Link 
+              href="/" 
+              onClick={() => {
+                setIsOpen(false);
+                if (window.location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }} 
+              className="flex items-center gap-3 hover:opacity-70 transition-opacity flex-shrink-0 z-[110] relative"
+            >
               <div className="relative w-8 h-8 sm:w-10 sm:h-10 overflow-hidden rounded-full border border-border shadow-sm">
                 <Image src="/company-logo.png" alt="Lumora Triad" width={40} height={40} className="object-cover rounded-full" />
               </div>
-              <span suppressHydrationWarning className="text-xl sm:text-2xl font-bold tracking-tight hidden sm:block mt-1">
-                {"Lumora"}&nbsp;<span className="font-light tracking-widest uppercase opacity-70">{"Triad"}</span>
-              </span>
+              <Brand />
             </Link>
 
             {/* Desktop Navigation */}
