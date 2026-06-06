@@ -17,7 +17,7 @@ const SERVICES_DETAILED = [
     id: 'web-development',
     title: 'Web Design & Development',
     subtitle: 'High-performance, responsive systems',
-    image: '/service-web-development-showcase.jpg',
+    image: '/service-web-development-showcase.png',
     alt: 'Desktop screen displaying a custom dashboard built with Next.js and Tailwind CSS featuring dynamic charts and smooth visual grids',
     price: 'Starting from ₹25,000',
     timeline: '2–4 weeks',

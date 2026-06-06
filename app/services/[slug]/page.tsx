@@ -9,7 +9,7 @@ const SERVICE_DATA = {
     title: 'Web Design & Development',
     subtitle: 'High-performance, responsive systems optimized for digital scale',
     description: 'We build web applications with modern technologies that scale. From Next.js frontends to robust API architectures, we create systems designed for growth and reliability. Our focus is on creating systems that scale, perform, and adapt to your growing business needs.',
-    image: '/service-web-development-showcase.jpg',
+    image: '/service-web-development-showcase.png',
     whyMatters: 'In today\'s digital-first world, a robust web presence isn\'t just nice to have—it\'s essential. Poor performance, slow load times, and outdated technology stack can directly impact your bottom line. We build with scalability and performance in mind from day one.',
     benefits: [
       { title: 'High Performance', description: 'Lightning-fast load times and optimized performance metrics' },

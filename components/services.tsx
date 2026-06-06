@@ -8,7 +8,7 @@ const SERVICES = [
   {
     title: 'Web Design & Development',
     description: 'Fast, responsive websites and web apps built with modern frontend frameworks. Designed to load quickly, look sharp, and convert.',
-    image: '/service-web-development-showcase.jpg',
+    image: '/service-web-development-showcase.png',
     includes: ['Next.js & React', 'Mobile-first design', 'CMS integration'],
     slug: 'web-development'
   },
