@@ -5,32 +5,43 @@
 
 :root {
   /* Apple.com Exact Color System */
-  --background: oklch(1 0 0);              /* #FFFFFF - Pure white page background */
-  --foreground: oklch(0.21 0.008 265);     /* #1D1D1F - Apple deep off-black text */
-  --card: oklch(1 0 0);                    /* #FFFFFF - Card surfaces */
+  --background: oklch(1 0 0);
+  /* #FFFFFF - Pure white page background */
+  --foreground: oklch(0.21 0.008 265);
+  /* #1D1D1F - Apple deep off-black text */
+  --card: oklch(1 0 0);
+  /* #FFFFFF - Card surfaces */
   --card-foreground: oklch(0.21 0.008 265);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.21 0.008 265);
-  --primary: oklch(0.51 0.17 255);         /* #0066CC - Apple signature blue */
-  --primary-foreground: oklch(1 0 0);      /* White text on blue buttons */
-  --secondary: oklch(0.968 0.003 265);     /* #F5F5F7 - Apple lite shade (navbar/footer) */
+  --primary: oklch(0.51 0.17 255);
+  /* #0066CC - Apple signature blue */
+  --primary-foreground: oklch(1 0 0);
+  /* White text on blue buttons */
+  --secondary: oklch(0.968 0.003 265);
+  /* #F5F5F7 - Apple lite shade (navbar/footer) */
   --secondary-foreground: oklch(0.21 0.008 265);
-  --muted: oklch(0.968 0.003 265);         /* #F5F5F7 - Muted section bg */
-  --muted-foreground: oklch(0.42 0.008 265); /* #6E6E73 improved - Apple secondary text, better contrast */
+  --muted: oklch(0.968 0.003 265);
+  /* #F5F5F7 - Muted section bg */
+  --muted-foreground: oklch(0.42 0.008 265);
+  /* #6E6E73 improved - Apple secondary text, better contrast */
   --accent: oklch(0.968 0.003 265);
   --accent-foreground: oklch(0.21 0.008 265);
   --destructive: oklch(0.5 0.18 25);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.85 0.004 265);         /* #D2D2D7 - Apple light silver border */
+  --border: oklch(0.85 0.004 265);
+  /* #D2D2D7 - Apple light silver border */
   --input: oklch(0.85 0.004 265);
-  --ring: oklch(0.51 0.17 255);            /* Apple Blue focus ring */
+  --ring: oklch(0.51 0.17 255);
+  /* Apple Blue focus ring */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.75rem;
-  --sidebar: oklch(0.968 0.003 265);       /* #F5F5F7 */
+  --sidebar: oklch(0.968 0.003 265);
+  /* #F5F5F7 */
   --sidebar-foreground: oklch(0.21 0.008 265);
   --sidebar-primary: oklch(0.51 0.17 255);
   --sidebar-primary-foreground: oklch(1 0 0);
@@ -42,23 +53,30 @@
 
 .dark {
   /* Apple OLED Dark Mode */
-  --background: oklch(0 0 0);             /* #000000 Pure Black OLED */
-  --foreground: oklch(0.968 0.003 265);   /* #F5F5F7 Off-white text */
-  --card: oklch(0.13 0.005 265);          /* #1C1C1E Apple dark card */
+  --background: oklch(0 0 0);
+  /* #000000 Pure Black OLED */
+  --foreground: oklch(0.968 0.003 265);
+  /* #F5F5F7 Off-white text */
+  --card: oklch(0.13 0.005 265);
+  /* #1C1C1E Apple dark card */
   --card-foreground: oklch(0.968 0.003 265);
   --popover: oklch(0.13 0.005 265);
   --popover-foreground: oklch(0.968 0.003 265);
-  --primary: oklch(0.65 0.16 255);        /* Lighter Apple blue for dark */
+  --primary: oklch(0.65 0.16 255);
+  /* Lighter Apple blue for dark */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.17 0.005 265);     /* #2C2C2E Apple dark secondary */
+  --secondary: oklch(0.17 0.005 265);
+  /* #2C2C2E Apple dark secondary */
   --secondary-foreground: oklch(0.968 0.003 265);
   --muted: oklch(0.17 0.005 265);
-  --muted-foreground: oklch(0.62 0.006 265); /* #98989D Apple dark muted text */
+  --muted-foreground: oklch(0.62 0.006 265);
+  /* #98989D Apple dark muted text */
   --accent: oklch(0.21 0.008 265);
   --accent-foreground: oklch(0.968 0.003 265);
   --destructive: oklch(0.5 0.18 25);
   --destructive-foreground: oklch(0.968 0.003 265);
-  --border: oklch(0.28 0.006 265);        /* #3A3A3C Apple dark border */
+  --border: oklch(0.28 0.006 265);
+  /* #3A3A3C Apple dark border */
   --input: oklch(0.28 0.006 265);
   --ring: oklch(0.65 0.16 255);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -121,6 +139,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -128,10 +147,13 @@
 
 /* Custom Animations */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
     opacity: 0.1;
   }
+
   50% {
     transform: translateY(-20px);
     opacity: 0.15;
@@ -142,6 +164,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -152,6 +175,7 @@
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -163,6 +187,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -174,6 +199,7 @@
     transform: scale(0.98);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -185,6 +211,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -195,15 +222,19 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-4px);
   }
 }
 
 @keyframes subtleGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
   }
+
   50% {
     box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.05);
   }
@@ -290,55 +321,59 @@ input:focus-visible {
     font-size: 16px;
     line-height: 1.6;
   }
-  
+
   h1 {
     font-size: 1.875rem;
     line-height: 1.15;
     font-weight: 600;
   }
-  
+
   h2 {
     font-size: 1.75rem;
     line-height: 1.2;
     font-weight: 600;
   }
-  
+
   h3 {
     font-size: 1.375rem;
     font-weight: 600;
   }
-  
+
   h4 {
     font-size: 1.125rem;
   }
-  
-  p, span, li {
+
+  p,
+  span,
+  li {
     line-height: 1.6;
     font-size: 1rem;
   }
-  
+
   button {
     min-height: 44px;
     min-width: 44px;
     font-size: 14px;
     padding: 12px 16px;
   }
-  
-  input, textarea, select {
+
+  input,
+  textarea,
+  select {
     font-size: 16px;
     padding: 12px;
     min-height: 44px;
   }
-  
+
   section {
     padding: 40px 16px;
   }
-  
+
   .px-6 {
     padding-left: 16px;
     padding-right: 16px;
   }
-  
+
   .px-8 {
     padding-left: 16px;
     padding-right: 16px;
@@ -359,7 +394,9 @@ img {
 }
 
 /* Better text rendering */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }

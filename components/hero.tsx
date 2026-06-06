@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export function Hero() {
@@ -12,73 +11,57 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative bg-background overflow-hidden">
+    <section className="relative bg-background overflow-hidden pt-32 sm:pt-36 lg:pt-44 pb-24 px-4 sm:px-8 lg:px-12">
+      {/* Technical Grid Overlay (UI/UX architectural layout) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+
       {/* Visually hidden h1 for SEO/accessibility */}
       <h1 className="sr-only">Lumora Triad — Premium Web &amp; Product Studio</h1>
 
-      {/* ── Headline overlapping the top of the image ── */}
-      <div
-        className={`relative z-10 pt-32 sm:pt-36 lg:pt-44 px-4 sm:px-8 lg:px-12 pb-6 sm:pb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-          }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-[0.92] tracking-tighter text-foreground max-w-4xl">
+      {/* Floating 3D Ambient Orbs (Pinterest-inspired light refractions) */}
+      <div className="absolute right-[-10%] top-[-5%] w-[500px] h-[500px] rounded-full bg-white/15 blur-3xl pointer-events-none animate-pulse duration-[8s]" />
+      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl pointer-events-none animate-pulse duration-[12s]" />
+
+      {/* Glossy 3D Glassmorphic Objects */}
+      <div className="absolute right-[8%] bottom-[25%] w-36 h-36 rounded-3xl border border-white/35 bg-gradient-to-tr from-white/20 to-white/5 backdrop-blur-md shadow-2xl rotate-12 hover:rotate-45 transition-transform duration-[1500ms] pointer-events-none hidden lg:block animate-float" />
+      <div className="absolute right-[22%] top-[20%] w-20 h-20 rounded-full border border-white/45 bg-gradient-to-tr from-white/30 to-white/10 backdrop-blur-xl shadow-xl -rotate-12 hover:rotate-12 transition-transform duration-[1500ms] pointer-events-none hidden lg:block animate-float animation-delay-2000" />
+      <div className="absolute left-[8%] top-[35%] w-16 h-16 rounded-xl border border-white/25 bg-gradient-to-tr from-white/25 to-white/5 backdrop-blur-sm shadow-md rotate-45 pointer-events-none hidden lg:block animate-float animation-delay-4000" />
+
+      <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12 lg:gap-8">
+        {/* Headline */}
+        <div
+          className={`transition-all duration-1000 cubic-bezier(0.16,1,0.3,1) flex-1 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'
+            }`}
+        >
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-[-0.04em] text-foreground">
             We build digital
             <br className="hidden sm:block" />{' '}
             products that look
             <br className="hidden sm:block" />{' '}
-            <span className="italic font-light">credible</span> and move fast.
+            <span className="font-serif italic font-light text-foreground/60 lowercase">credible</span> and move fast.
           </h2>
         </div>
-      </div>
 
-      {/* ── Hero Image ── */}
-      <div
-        className={`relative w-full transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.98]'
-          }`}
-      >
-        <div className="mx-3 sm:mx-6 lg:mx-10">
-          {/* Using Next.js Image for automatic WebP/AVIF conversion and CLS prevention */}
-          <Image
-            src="/hero-lumora-display.jpg"
-            alt="Lumora Triad — Web design and engineering studio showcasing premium web design work"
-            width={1400}
-            height={900}
-            priority
-            className="w-full h-auto rounded-xl sm:rounded-2xl lg:rounded-3xl border border-border/40 shadow-[0_20px_60px_rgba(0,0,0,0.1)]"
-            sizes="(max-width: 640px) calc(100vw - 24px), (max-width: 1024px) calc(100vw - 48px), calc(100vw - 80px)"
-          />
-        </div>
-      </div>
-
-      {/* ── Subtext + CTAs below image ── */}
-      <div
-        className={`relative z-10 px-4 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-          }`}
-      >
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-end justify-between gap-8 lg:gap-16">
-          {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground font-normal leading-relaxed max-w-xl">
-            Design, engineering, and delivery under one roof. We work with startups and growing brands —
-            end-to-end, no hand-offs, no excuses.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-row gap-3 sm:gap-4 flex-shrink-0 items-center">
+        {/* CTA Buttons */}
+        <div
+          className={`transition-all duration-1000 delay-300 cubic-bezier(0.16,1,0.3,1) flex-shrink-0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
+        >
+          <div className="flex flex-col gap-3 sm:gap-4 items-stretch lg:items-end">
             <Link
               href="/contact"
               aria-label="Start a Project with Lumora Triad"
-              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background font-bold rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-xl text-sm sm:text-base group whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background font-bold rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-xl text-sm sm:text-base group whitespace-nowrap"
             >
               Start a Project
               <span aria-hidden="true" className="text-base group-hover:rotate-45 transition-transform duration-300">↗</span>
             </Link>
             <Link
-              href="/work"
-              aria-label="See Our Work"
-              className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-4 text-foreground font-semibold border border-border rounded-full hover:bg-foreground hover:text-background transition-all duration-300 text-sm sm:text-base group whitespace-nowrap"
+              href="/services"
+              aria-label="Explore Services"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-4 text-foreground font-semibold border border-foreground/20 rounded-full hover:bg-foreground/5 transition-all duration-300 text-sm sm:text-base group whitespace-nowrap"
             >
-              See our work
+              Explore services
               <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>

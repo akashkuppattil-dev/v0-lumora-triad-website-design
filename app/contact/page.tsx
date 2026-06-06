@@ -175,11 +175,8 @@ export default function ContactPage() {
                 >
                   <option value="web-development">Web Design & Development</option>
                   <option value="ui-ux-design">UI/UX Design</option>
-                  <option value="branding">Branding & Identity</option>
-                  <option value="backend-api">Backend & API Development</option>
+                  <option value="branding-seo-growth">Branding, SEO & Growth</option>
                   <option value="ecommerce">E-commerce Solutions</option>
-                  <option value="seo-growth">SEO & Growth</option>
-                  <option value="ai-automation">AI Integration & Automation</option>
                   <option value="maintenance">Maintenance & Support</option>
                   <option value="general-inquiry">Just an inquiry</option>
                 </select>

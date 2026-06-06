@@ -35,33 +35,18 @@ const SERVICES_DETAILED = [
     ]
   },
   {
-    id: 'branding',
-    title: 'Branding & Identity',
-    subtitle: 'Visual systems & brand strategy',
+    id: 'branding-seo-growth',
+    title: 'Branding, SEO & Growth',
+    subtitle: 'Brand strategy, organic search & digital marketing',
     image: '/service-branding-showcase.jpg',
-    description: 'We create comprehensive brand identities that resonate with modern audiences. From logo design to brand guidelines, we establish clarity and consistency.',
+    description: 'We build comprehensive brand identities and technical growth strategies designed to establish authority, drive organic visibility, and scale your audience through targeted social media and digital marketing.',
     features: [
       'Brand strategy & positioning',
       'Logo & visual identity',
-      'Typography & color systems',
-      'Digital brand guidelines',
-      'Marketing collateral design',
-      'Brand consistency audits'
-    ]
-  },
-  {
-    id: 'backend-api',
-    title: 'Backend & API Development',
-    subtitle: 'Robust, secure server-side logic',
-    image: '/service-backend-v2.png',
-    description: 'We architect and build scalable server-side solutions and integrations. Focused on data integrity, security, and high-performance system communication.',
-    features: [
-      'Django & Python backends',
-      'Node.js & Go solutions',
-      'Database architecture',
-      'REST & GraphQL API design',
-      'Third-party integrations',
-      'Cloud infrastructure management'
+      'Social media strategy & assets',
+      'Digital marketing campaigns',
+      'Technical SEO & indexing',
+      'Analytical growth tracking'
     ]
   },
   {
@@ -77,36 +62,6 @@ const SERVICES_DETAILED = [
       'Inventory & CRM integration',
       'Conversion rate optimization',
       'Global commerce strategy'
-    ]
-  },
-  {
-    id: 'seo-growth',
-    title: 'SEO & Growth',
-    subtitle: 'Organic visibility & performance',
-    image: '/service-strategy.jpg',
-    description: 'Technical SEO and digital marketing strategies to increase your business reach and conversion efficiency through performance-driven approaches.',
-    features: [
-      'Technical SEO & code audits',
-      'Core Web Vitals optimization',
-      'Analytical growth tracking',
-      'Content strategy & execution',
-      'Conversion funnel analysis',
-      'Performance marketing strategy'
-    ]
-  },
-  {
-    id: 'ai-automation',
-    title: 'AI Integration & Automation',
-    subtitle: 'Modernizing business workflows',
-    image: '/case-study-saas.jpg',
-    description: 'Leveraging modern AI and automation to reduce costs and improve business efficiency through custom agents and intelligent process design.',
-    features: [
-      'Custom LLM implementations',
-      'Intelligent process automation',
-      'AI-driven user experiences',
-      'Workflow optimization scripts',
-      'Data-driven AI consultation',
-      'Automated reporting systems'
     ]
   },
   {

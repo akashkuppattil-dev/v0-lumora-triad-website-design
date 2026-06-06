@@ -56,54 +56,29 @@ const SERVICE_DATA = {
       { step: 4, title: 'Handoff', description: 'Developer-ready specs and design system documentation' }
     ]
   },
-  'branding': {
-    title: 'Branding & Identity',
-    subtitle: 'Crafting distinctive brand identities that resonate',
-    description: 'Branding goes beyond logos. We develop comprehensive identity systems that communicate your values, differentiate you from competitors, and create lasting impressions. From logo design to brand guidelines, we establish clarity and consistency.',
+  'branding-seo-growth': {
+    title: 'Branding, SEO & Growth',
+    subtitle: 'Brand strategy, organic search & digital marketing',
+    description: 'We build comprehensive brand identities and technical growth strategies designed to establish authority, drive organic visibility, and scale your audience through targeted social media and digital marketing.',
     image: '/service-branding-showcase.jpg',
-    whyMatters: 'Your brand is more than a logo—it\'s the perception of everything you do. Strong branding creates recognition, builds trust, and allows you to command premium pricing. Weak branding leaves you indistinguishable from competitors.',
+    whyMatters: 'A strong brand combined with search visibility and structured digital campaigns ensures your business stands out, builds credibility immediately, and scales sustainably across all user touchpoints.',
     benefits: [
       { title: 'Brand Strategy', description: 'Clear positioning and messaging framework' },
       { title: 'Visual Identity', description: 'Logo, color palette, and typography system' },
-      { title: 'Brand Guidelines', description: 'Comprehensive documentation for consistency' },
-      { title: 'Brand Voice', description: 'Tone and messaging guidelines' },
-      { title: 'Collateral Design', description: 'Business cards, letterhead, and marketing materials' },
-      { title: 'Digital Brand', description: 'Website and digital touchpoint design' }
+      { title: 'Social & Digital Strategy', description: 'Cohesive branding across social media channels and digital platforms' },
+      { title: 'Technical SEO', description: 'Optimizing code and site structure for search engines' },
+      { title: 'Organic Content', description: 'Building authority through strategic, valuable content' },
+      { title: 'Marketing Campaigns', description: 'Data-driven campaigns to drive traffic and conversion' }
     ],
     caseStudies: [
       { id: 1, title: 'Tech Startup Rebrand', category: 'Branding', image: '/case-study-fintech.jpg' },
-      { id: 2, title: 'Enterprise Identity System', category: 'Branding', image: '/case-study-saas.jpg' }
+      { id: 2, title: 'Organic Reach Campaign', category: 'Growth', image: '/project-landing-page.jpg' }
     ],
     process: [
-      { step: 1, title: 'Discovery', description: 'Understand your vision, values, and target audience' },
-      { step: 2, title: 'Strategy', description: 'Develop positioning and brand messaging' },
-      { step: 3, title: 'Design', description: 'Create visual identity and brand system' },
-      { step: 4, title: 'Implementation', description: 'Rollout guidelines and collateral design' }
-    ]
-  },
-  'backend-api': {
-    title: 'Backend & API Development',
-    subtitle: 'Robust, secure server-side logic and system communication',
-    description: 'We architect and build scalable server-side solutions and integrations. Focused on data integrity, security, and high-performance system communication to power your complex digital workflows.',
-    image: '/service-backend-v2.png',
-    whyMatters: 'Behind every great interface is a powerful backend. Slow APIs or insecure databases can cripple even the best-looking products. We build the engine that powers your business, ensuring performance and stability under load.',
-    benefits: [
-      { title: 'Data Integrity', description: 'Robust database structures ensuring information accuracy' },
-      { title: 'Performance', description: 'High-speed API responses and server-side logic' },
-      { title: 'Security', description: 'Enterprise-grade protection for your sensitive data' },
-      { title: 'Integration', description: 'Seamless communication between diverse systems' },
-      { title: 'Scalability', description: 'Backends designed to handle growing user volumes' },
-      { title: 'Documentation', description: 'Clear API documentation for developer accessibility' }
-    ],
-        caseStudies: [
-          { id: 4, title: 'FinTech API Infrastructure', category: 'Backend', image: '/service-backend-v2.png' },
-      { id: 2, title: 'Enterprise Resource System', category: 'Backend', image: '/project-business-platform.jpg' }
-    ],
-    process: [
-      { step: 1, title: 'Architecture', description: 'Design robust system structures and data models' },
-      { step: 2, title: 'Development', description: 'Clean, performant code using modern server-side tech' },
-      { step: 3, title: 'Security Audit', description: 'Vulnerability assessments and data protection hardening' },
-      { step: 4, title: 'Deployment', description: 'CI/CD pipelines and stable production environments' }
+      { step: 1, title: 'Discovery & Audit', description: 'Understand your vision, values, target audience, social presence, and current SEO standing' },
+      { step: 2, title: 'Strategy & Identity', description: 'Develop brand positioning, social media strategy, visual identity, and organic growth roadmap' },
+      { step: 3, title: 'Implementation', description: 'Roll out guidelines, design social media assets, and apply technical SEO optimization' },
+      { step: 4, title: 'Campaigns & Growth', description: 'Launch digital marketing campaigns, monitor performance, and continuously optimize authority' }
     ]
   },
   'ecommerce': {
@@ -129,56 +104,6 @@ const SERVICE_DATA = {
       { step: 2, title: 'Design', description: 'Create high-conversion user interfaces' },
       { step: 3, title: 'Implementation', description: 'Build and integrate the commerce engine' },
       { step: 4, title: 'Launch', description: 'Deployment, testing, and growth monitoring' }
-    ]
-  },
-  'seo-growth': {
-    title: 'SEO & Growth',
-    subtitle: 'Organic visibility & conversion performance',
-    description: 'Technical SEO and digital marketing strategies to increase your business reach and conversion efficiency. We combine code audits with strategic content to drive sustainable organic growth.',
-    image: '/service-strategy.jpg',
-    whyMatters: 'A beautiful site doesn\'t matter if no one finds it. In an increasingly crowded digital landscape, organic visibility is the most sustainable way to grow your business over time, reducing reliance on paid acquisition.',
-    benefits: [
-      { title: 'Technical SEO', description: 'Optimizing code and site structure for search engines' },
-      { title: 'Organic Content', description: 'Building authority through strategic, valuable content' },
-      { title: 'Performance Audits', description: 'Continuous monitoring of Core Web Vitals and SEO health' },
-      { title: 'Keyword Optimization', description: 'Targeting high-intent traffic for maximum ROI' },
-      { title: 'Analytics Growth', description: 'Data-driven insights to refine marketing strategies' },
-      { title: 'Technical Integrity', description: 'Ensuring your system is indexed and ranked correctly' }
-    ],
-    caseStudies: [
-      { id: 1, title: 'Organic Reach Campaign', category: 'Growth', image: '/project-landing-page.jpg' },
-      { id: 2, title: 'Technical SEO Overhaul', category: 'Growth', image: '/project-1.jpg' }
-    ],
-    process: [
-      { step: 1, title: 'Audit', description: 'Thorough analysis of current SEO and market standing' },
-      { step: 2, title: 'Strategy', description: 'Create a roadmap for visibility and acquisition' },
-      { step: 3, title: 'Implementation', description: 'Technical fixes and content creation' },
-      { step: 4, title: 'Optimization', description: 'Continuous testing and iterative refinement' }
-    ]
-  },
-  'ai-automation': {
-    title: 'AI Integration & Automation',
-    subtitle: 'Modernizing business workflows with intelligence',
-    description: 'Leveraging modern AI and automation to reduce costs and improve efficiency. We build custom agents and intelligent process designs that automate repetitive tasks, allowing your team to focus on high-value strategy.',
-    image: '/case-study-saas.jpg',
-    whyMatters: 'AI is no longer optional in the modern enterprise. Automating workflows and using intelligent agents allows organizations to scale rapidly while maintaining precision and reducing operational overhead.',
-    benefits: [
-      { title: 'Cost Reduction', description: 'Lower operational costs through automated processes' },
-      { title: 'Workflow Speed', description: 'Rapid execution of complex, repetitive tasks' },
-      { title: 'Intelligent Agents', description: 'Custom LLM implementations for specific business needs' },
-      { title: 'Data Insights', description: 'AI-driven analysis of business and user data' },
-      { title: '24/7 Availability', description: 'Always-on automated systems and user support' },
-      { title: 'Future-Proofing', description: 'Building your business on the cutting edge of tech' }
-    ],
-    caseStudies: [
-      { id: 1, title: 'Intelligent Agent Deployment', category: 'AI', image: '/project-admin-system.jpg' },
-      { id: 2, title: 'Workflow Automation Suite', category: 'Automation', image: '/project-2.jpg' }
-    ],
-    process: [
-      { step: 1, title: 'Assessment', description: 'Identify automation opportunities and AI use cases' },
-      { step: 2, title: 'Design', description: 'Architect custom agents and automated flows' },
-      { step: 3, title: 'Integration', description: 'Connect AI systems to your existing codebase' },
-      { step: 4, title: 'Governance', description: 'Monitoring, safety checks, and performance tuning' }
     ]
   },
   'maintenance': {
@@ -346,42 +271,6 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            Recent work
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {service.caseStudies.map((study) => (
-              <Link
-                key={study.id}
-                href={`/work#case-${study.id}`}
-                className="group block"
-              >
-                <div className="relative h-96 rounded-xl overflow-hidden border border-border mb-6 group-hover:border-foreground transition-colors">
-                  <Image
-                    src={study.image}
-                    alt={`${study.title} — Case study for ${service.title}`}
-                    fill
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                    {study.category}
-                  </p>
-                  <h3 className="text-2xl font-semibold group-hover:text-muted-foreground transition-colors">
-                    {study.title}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-foreground text-background rounded-2xl mx-4 sm:mx-6 lg:mx-8 mb-20">

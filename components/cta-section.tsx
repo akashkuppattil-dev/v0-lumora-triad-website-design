@@ -48,8 +48,8 @@ export function CTASection() {
               Start Your Project
               <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
-            <a href="/work" className="px-10 py-4 text-background font-semibold hover:opacity-70 transition-all duration-300 group inline-flex items-center gap-2 whitespace-nowrap text-base">
-              See Our Work
+            <a href="/services" className="px-10 py-4 text-background font-semibold hover:opacity-70 transition-all duration-300 group inline-flex items-center gap-2 whitespace-nowrap text-base">
+              Explore Services
               <span className="text-base group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
           </div>

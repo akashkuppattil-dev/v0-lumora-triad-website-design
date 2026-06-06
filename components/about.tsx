@@ -24,13 +24,12 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="py-12 lg:py-24 px-4 lg:px-8 bg-background border-t border-border">
+    <section id="about" className="py-12 lg:py-24 px-4 lg:px-8 bg-transparent border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
-          className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-10'
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-10'
+            }`}
         >
           {/* Section Divider */}
           <div className="flex items-center gap-4 mb-8 lg:mb-16">
@@ -54,16 +53,6 @@ export function About() {
                 <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
                   We handle every layer — from UI design and frontend engineering to custom backends and API integrations. One team, end-to-end ownership, and real communication throughout.
                 </p>
-                <div className="pt-8 flex flex-wrap items-center gap-12 border-t border-border">
-                  <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Core Stack</span>
-                    <span className="text-sm font-medium">React · Next.js · Django · Postgres</span>
-                  </div>
-                  <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-40">Based In</span>
-                    <span className="text-sm font-medium">Kerala, India — Remote Worldwide</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

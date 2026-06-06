@@ -32,7 +32,7 @@ export function Process() {
   }, [])
 
   return (
-    <section className="py-24 px-6 lg:px-8 bg-background border-t border-border">
+    <section className="py-24 px-6 lg:px-8 bg-transparent border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}

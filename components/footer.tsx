@@ -17,9 +17,9 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6 transition-opacity hover:opacity-100">
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-background/20 shadow-sm bg-background/5">
-                <Image 
-                  src="/company-logo.png" 
-                  alt="Lumora Triad" 
+                <Image
+                  src="/company-logo.png"
+                  alt="Lumora Triad"
                   fill
                   className="object-cover rounded-full"
                 />
@@ -41,11 +41,6 @@ export function Footer() {
               Navigation
             </h3>
             <ul className="space-y-4">
-              <li>
-                <Link href="/work" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Work
-                </Link>
-              </li>
               <li>
                 <Link href="/services" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
                   Services
@@ -81,13 +76,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/backend-api" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Backend & API
+                <Link href="/services/branding-seo-growth" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
+                  Branding & SEO
                 </Link>
               </li>
               <li>
                 <Link href="/services/ecommerce" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
                   E-commerce
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/maintenance" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
+                  Maintenance
                 </Link>
               </li>
             </ul>

@@ -27,26 +27,6 @@ export default function AboutPage() {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Lumora Triad was founded with a singular purpose: to provide startups and enterprise leaders with a direct, collaborative pathway to production-ready digital products. No bloated account layers, no hand-off friction.
                 </p>
-                <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border">
-                  <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-30">Our Stack</span>
-                    <ul className="text-xs font-bold space-y-2 uppercase tracking-wide">
-                      <li>Next.js / React</li>
-                      <li>Django / Python</li>
-                      <li>Cloud Infrastructure</li>
-                      <li>Technical SEO</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <span className="block text-[10px] uppercase tracking-widest font-black mb-2 opacity-30">Status</span>
-                    <ul className="text-xs font-bold space-y-2 uppercase tracking-wide">
-                      <li>Est. 2024</li>
-                      <li>Global Remote</li>
-                      <li>Boutique Scale</li>
-                      <li>Q2 2026 Intake</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -70,37 +50,6 @@ export default function AboutPage() {
               <p>
                 Our core team (The "Triad") focuses on three pillars: **Design Intelligence**, **Architectural Integrity**, and **Delivery Velocity**. We remain a small, boutique circle to ensure that every project we touch receives elite technical attention.
               </p>
-            </div>
-          </div>
-
-          {/* Team Snapshot visual */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group">
-               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
-                  <Image src="/service-ui-design-showcase.jpg" alt="Design Lead" fill className="object-cover" />
-               </div>
-               <div className="pt-6">
-                  <h4 className="text-lg font-bold uppercase tracking-tighter">Design Discipline</h4>
-                  <p className="text-xs font-black uppercase tracking-widest opacity-40">High-End Narratives</p>
-               </div>
-            </div>
-            <div className="relative group">
-               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
-                  <Image src="/service-backend-v2.png" alt="Engineering Lead" fill className="object-cover" />
-               </div>
-               <div className="pt-6">
-                  <h4 className="text-lg font-bold uppercase tracking-tighter">Engineering Lead</h4>
-                  <p className="text-xs font-black uppercase tracking-widest opacity-40">Robust Architecture</p>
-               </div>
-            </div>
-            <div className="relative group">
-               <div className="aspect-[4/5] rounded-3xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-border">
-                  <Image src="/service-strategy.jpg" alt="Product Lead" fill className="object-cover" />
-               </div>
-               <div className="pt-6">
-                  <h4 className="text-lg font-bold uppercase tracking-tighter">Growth & Strategy</h4>
-                  <p className="text-xs font-black uppercase tracking-widest opacity-40">Product Performance</p>
-               </div>
             </div>
           </div>
         </section>

@@ -103,14 +103,14 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Brand Logo */}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               onClick={() => {
                 setIsOpen(false);
                 if (window.location.pathname === '/') {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
-              }} 
+              }}
               className="flex items-center gap-3 hover:opacity-70 transition-opacity flex-shrink-0 z-[110] relative"
             >
               <div className="relative w-8 h-8 sm:w-10 sm:h-10 overflow-hidden rounded-full border border-border shadow-sm">
@@ -121,16 +121,18 @@ export function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-10">
-              {['Work', 'Services', 'About', 'Contact'].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 relative group overflow-hidden"
-                >
-                  <span>{item}</span>
-                  <span className="absolute bottom-0 left-0 w-full h-px bg-foreground -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-                </Link>
-              ))}
+              <Link href="/services" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 relative group overflow-hidden">
+                <span>Services</span>
+                <span className="absolute bottom-0 left-0 w-full h-px bg-foreground -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              </Link>
+              <Link href="/about" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 relative group overflow-hidden">
+                <span>About</span>
+                <span className="absolute bottom-0 left-0 w-full h-px bg-foreground -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              </Link>
+              <Link href="/contact" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 relative group overflow-hidden">
+                <span>Contact</span>
+                <span className="absolute bottom-0 left-0 w-full h-px bg-foreground -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              </Link>
             </div>
 
             {/* Desktop CTA */}
@@ -173,7 +175,6 @@ export function Navbar() {
           {/* Nav Links */}
           <div className="flex flex-col gap-2 mb-10">
             {[
-              { label: 'Work', href: '/work' },
               { label: 'Services', href: '/services' },
               { label: 'About', href: '/about' },
               { label: 'Contact', href: '/contact' },

@@ -20,34 +20,16 @@ const INQUIRY_OPTIONS = [
     message: `Hi ${STUDIO_NAME}! I need help with UI/UX design for my product. Can we set up a call?`,
   },
   {
-    id: 'branding',
+    id: 'branding-seo',
     emoji: '✨',
-    title: 'Branding & Identity',
-    message: `Hi ${STUDIO_NAME}! I'm looking for branding and visual identity work. I'd love to discuss my project.`,
-  },
-  {
-    id: 'backend',
-    emoji: '⚙️',
-    title: 'Backend & API Development',
-    message: `Hi ${STUDIO_NAME}! I need backend/API development services. Can we talk about my requirements?`,
+    title: 'Branding, SEO & Growth',
+    message: `Hi ${STUDIO_NAME}! I'm interested in branding, social media, SEO, and digital marketing services. Let's discuss!`,
   },
   {
     id: 'ecommerce',
     emoji: '🛒',
     title: 'E-commerce Solution',
     message: `Hi ${STUDIO_NAME}! I want to build an e-commerce store. Can you help me with this?`,
-  },
-  {
-    id: 'seo',
-    emoji: '📈',
-    title: 'SEO & Growth',
-    message: `Hi ${STUDIO_NAME}! I'm looking for SEO and growth strategy services. Let's discuss!`,
-  },
-  {
-    id: 'ai',
-    emoji: '🤖',
-    title: 'AI Integration & Automation',
-    message: `Hi ${STUDIO_NAME}! I need AI integration and automation for my business. Can we explore this?`,
   },
   {
     id: 'maintenance',

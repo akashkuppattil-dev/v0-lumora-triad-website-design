@@ -20,18 +20,11 @@ const SERVICES = [
     slug: 'ui-ux-design'
   },
   {
-    title: 'Branding & Identity',
-    description: 'Strategic visual systems that define and elevate your brand presence in the modern market.',
+    title: 'Branding, SEO & Growth',
+    description: 'Comprehensive brand identities and growth strategies designed to drive organic visibility, social media presence, and sustainable business growth.',
     image: '/service-branding-showcase.jpg',
-    includes: ['Visual identity systems', 'Digital brand guidelines', 'Logo & typography'],
-    slug: 'branding'
-  },
-  {
-    title: 'Backend & API Development',
-    description: 'Custom server-side logic, REST APIs, and database architecture for web apps that need more than a frontend.',
-    image: '/service-backend-v2.png',
-    includes: ['Django & Node.js', 'REST API design', 'Postgres & cloud DB'],
-    slug: 'backend-api'
+    includes: ['Brand & Social Strategy', 'Technical SEO & Audits', 'Digital Marketing Campaigns'],
+    slug: 'branding-seo-growth'
   },
   {
     title: 'E-commerce Solutions',
@@ -39,20 +32,6 @@ const SERVICES = [
     image: '/case-study-ecommerce.jpg',
     includes: ['Product & checkout UX', 'Payment gateway setup', 'Inventory management'],
     slug: 'ecommerce'
-  },
-  {
-    title: 'SEO & Growth',
-    description: 'Technical SEO and organic growth strategies that increase your sustainable market reach.',
-    image: '/service-strategy.jpg',
-    includes: ['Code-level optimization', 'Content architecture', 'Conversion audits'],
-    slug: 'seo-growth'
-  },
-  {
-    title: 'AI Integration & Automation',
-    description: 'Adding smart automation and AI-powered features to existing products and workflows.',
-    image: '/case-study-saas.jpg',
-    includes: ['Chatbot & assistant builds', 'Workflow automation', 'API-connected AI tools'],
-    slug: 'ai-automation'
   },
   {
     title: 'Maintenance & Support',
@@ -85,7 +64,7 @@ export function Services() {
   }, [])
 
   return (
-    <section id="services" className="py-12 lg:py-32 px-4 lg:px-8 bg-background border-t border-border">
+    <section id="services" className="py-12 lg:py-32 px-4 lg:px-8 bg-transparent border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
@@ -172,7 +151,7 @@ export function Services() {
                         alt={`${service.title} service by Lumora Triad`}
                         fill
                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                        sizes="(max-width: 1024px) 0px, 50vw"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
