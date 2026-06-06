@@ -12,8 +12,8 @@ interface ServiceProps {
     description: string
     image: string
     whyMatters: string
-    price: string
-    timeline: string
+    price?: string
+    timeline?: string
     benefits: Array<{ title: string; description: string }>
     caseStudies: Array<{ id: number; title: string; category: string; image: string }>
     process: Array<{ step: number; title: string; description: string }>
@@ -37,14 +37,20 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
                 {service.subtitle}
               </p>
               {/* Pricing and Timeline Badges */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs px-3 py-1.5 border border-border rounded-full font-bold bg-secondary">
-                  {service.price}
-                </span>
-                <span className="text-xs px-3 py-1.5 border border-border rounded-full font-semibold opacity-75">
-                  {service.timeline}
-                </span>
-              </div>
+              {(service.price || service.timeline) && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {service.price && (
+                    <span className="text-xs px-3 py-1.5 border border-border rounded-full font-bold bg-secondary">
+                      {service.price}
+                    </span>
+                  )}
+                  {service.timeline && (
+                    <span className="text-xs px-3 py-1.5 border border-border rounded-full font-semibold opacity-75">
+                      {service.timeline}
+                    </span>
+                  )}
+                </div>
+              )}
               <p className="text-lg text-muted-foreground font-normal leading-relaxed max-w-2xl mb-10">
                 {service.description}
               </p>

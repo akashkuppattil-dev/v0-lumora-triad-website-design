@@ -139,6 +139,8 @@ const SERVICE_DATA = {
     ]
   },
   'digital-strategy': {
+    price: 'Starting from ₹20,000',
+    timeline: '2–4 weeks',
     title: 'Digital Strategy',
     subtitle: 'Strategic roadmaps for digital transformation',
     description: 'Digital transformation requires more than technology—it needs a clear strategy aligned with your business goals. We help organizations plan, prioritize, and execute digital initiatives that create competitive advantage.',
