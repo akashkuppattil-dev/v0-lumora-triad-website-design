@@ -1,6 +1,4 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const INDUSTRIES = [
   { name: 'SaaS & Software', description: 'B2B platforms, dashboards, and developer tools' },
@@ -13,13 +11,27 @@ const INDUSTRIES = [
 
 export function Industries() {
   const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setIsVisible(true)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="py-32 bg-background border-t border-border">
+    <section ref={containerRef} className="py-32 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`mb-20 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>

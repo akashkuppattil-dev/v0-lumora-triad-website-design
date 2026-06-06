@@ -1,7 +1,15 @@
-'use client'
-
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BarChart3, TrendingUp, Users, Award } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Our Track Record & Digital Case Studies',
+  description: 'See the real results and measurable impact Lumora Triad has delivered. High-conversion web systems, UI/UX audits, and growth metrics for brands.',
+  openGraph: {
+    title: 'Our Track Record & Digital Case Studies — Lumora Triad',
+    description: 'Real results, measurable business impact. Explore our track record of custom Next.js web applications and digital design systems.',
+  }
+}
 
 const IMPACT_STATS = [
   { icon: 'users', value: '45+', label: 'Global Clients', description: 'Trusted by leading brands worldwide' },

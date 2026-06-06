@@ -89,7 +89,7 @@ All navigation links updated to point to new pages:
 ### Images Generated
 6 new professional mockup images:
 - `/service-web-development-showcase.jpg`
-- `/service-ui-design-showcase.jpg`
+- `/service-ui-design-showcase.png`
 - `/service-branding-showcase.jpg`
 - `/case-study-fintech.jpg`
 - `/case-study-ecommerce.jpg`

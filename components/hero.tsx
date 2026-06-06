@@ -1,15 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 export function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
   return (
     <section className="relative bg-background overflow-hidden pt-32 sm:pt-36 lg:pt-44 pb-24 px-4 sm:px-8 lg:px-12">
       {/* Technical Grid Overlay (UI/UX architectural layout) */}
@@ -19,20 +12,17 @@ export function Hero() {
       <h1 className="sr-only">Lumora Triad — Premium Web &amp; Product Studio</h1>
 
       {/* Floating 3D Ambient Orbs (Pinterest-inspired light refractions) */}
-      <div className="absolute right-[-10%] top-[-5%] w-[500px] h-[500px] rounded-full bg-white/15 blur-3xl pointer-events-none animate-pulse duration-[8s]" />
-      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl pointer-events-none animate-pulse duration-[12s]" />
+      <div className="absolute right-[-10%] top-[-5%] w-[500px] h-[500px] rounded-full bg-white/15 blur-3xl pointer-events-none" />
+      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl pointer-events-none" />
 
       {/* Glossy 3D Glassmorphic Objects */}
-      <div className="absolute right-[8%] bottom-[25%] w-36 h-36 rounded-3xl border border-white/35 bg-gradient-to-tr from-white/20 to-white/5 backdrop-blur-md shadow-2xl rotate-12 hover:rotate-45 transition-transform duration-[1500ms] pointer-events-none hidden lg:block animate-float" />
-      <div className="absolute right-[22%] top-[20%] w-20 h-20 rounded-full border border-white/45 bg-gradient-to-tr from-white/30 to-white/10 backdrop-blur-xl shadow-xl -rotate-12 hover:rotate-12 transition-transform duration-[1500ms] pointer-events-none hidden lg:block animate-float animation-delay-2000" />
-      <div className="absolute left-[8%] top-[35%] w-16 h-16 rounded-xl border border-white/25 bg-gradient-to-tr from-white/25 to-white/5 backdrop-blur-sm shadow-md rotate-45 pointer-events-none hidden lg:block animate-float animation-delay-4000" />
+      <div className="absolute right-[8%] bottom-[25%] w-36 h-36 rounded-3xl border border-white/35 bg-gradient-to-tr from-white/20 to-white/5 backdrop-blur-md shadow-2xl rotate-12 hover:rotate-45 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
+      <div className="absolute right-[22%] top-[20%] w-20 h-20 rounded-full border border-white/45 bg-gradient-to-tr from-white/30 to-white/10 backdrop-blur-xl shadow-xl -rotate-12 hover:rotate-12 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
+      <div className="absolute left-[8%] top-[35%] w-16 h-16 rounded-xl border border-white/25 bg-gradient-to-tr from-white/25 to-white/5 backdrop-blur-sm shadow-md rotate-45 pointer-events-none hidden lg:block" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12 lg:gap-8">
         {/* Headline */}
-        <div
-          className={`transition-all duration-1000 cubic-bezier(0.16,1,0.3,1) flex-1 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'
-            }`}
-        >
+        <div className="flex-1 opacity-100 translate-y-0 scale-100">
           <h2 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-[-0.04em] text-foreground">
             We build digital
             <br className="hidden sm:block" />{' '}
@@ -43,10 +33,7 @@ export function Hero() {
         </div>
 
         {/* CTA Buttons */}
-        <div
-          className={`transition-all duration-1000 delay-300 cubic-bezier(0.16,1,0.3,1) flex-shrink-0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}
-        >
+        <div className="flex-shrink-0 opacity-100 translate-y-0">
           <div className="flex flex-col gap-3 sm:gap-4 items-stretch lg:items-end">
             <Link
               href="/contact"

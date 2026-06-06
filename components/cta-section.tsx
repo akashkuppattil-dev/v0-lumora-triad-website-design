@@ -39,7 +39,7 @@ export function CTASection() {
             We work with a focused number of clients at a time — which means you get real attention, clear communication, and work that ships.
           </p>
           <p className="text-sm text-background/50 font-medium mb-14">
-            Currently accepting new projects for Q2 2025.
+            Now accepting new projects for Q3 2026.
           </p>
 
           {/* CTA Buttons */}

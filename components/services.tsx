@@ -15,28 +15,28 @@ const SERVICES = [
   {
     title: 'UI/UX Design',
     description: 'Clean, intuitive interfaces designed to build trust and drive action. From wireframes to production-ready Figma files.',
-    image: '/service-ui-design-showcase.jpg',
+    image: '/service-ui-design-showcase.png',
     includes: ['Figma design systems', 'User flow mapping', 'Responsive prototyping'],
     slug: 'ui-ux-design'
   },
   {
     title: 'Branding, SEO & Growth',
     description: 'Comprehensive brand identities and growth strategies designed to drive organic visibility, social media presence, and sustainable business growth.',
-    image: '/service-branding-showcase.jpg',
+    image: '/service-branding-seo-growth.png',
     includes: ['Brand & Social Strategy', 'Technical SEO & Audits', 'Digital Marketing Campaigns'],
     slug: 'branding-seo-growth'
   },
   {
     title: 'E-commerce Solutions',
     description: 'Conversion-focused online stores built for clarity and ease of purchase on any device.',
-    image: '/case-study-ecommerce.jpg',
+    image: '/service-ecommerce-showcase.png',
     includes: ['Product & checkout UX', 'Payment gateway setup', 'Inventory management'],
     slug: 'ecommerce'
   },
   {
     title: 'Maintenance & Support',
     description: 'Ongoing updates, bug fixes, and performance improvements so your site keeps running smoothly.',
-    image: '/service-web-dev.jpg',
+    image: '/service-maintenance-support.jpg',
     includes: ['Monthly update plans', 'Bug fixes & patches', 'Performance checks'],
     slug: 'maintenance'
   }
@@ -68,9 +68,8 @@ export function Services() {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
-          className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-4'
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-4'
+            }`}
         >
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 lg:mb-24 gap-4 lg:gap-8">
@@ -85,8 +84,8 @@ export function Services() {
                 Services we provide.
               </h2>
             </div>
-            <Link 
-              href="/services/impact" 
+            <Link
+              href="/services/impact"
               className="text-sm font-bold uppercase tracking-widest hover:opacity-60 transition-opacity border-b-2 border-foreground pb-1 flex-shrink-0"
             >
               See impact & stats →
@@ -98,9 +97,8 @@ export function Services() {
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
-                className={`transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-10'
-                }`}
+                className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms`, transitionDuration: '1000ms' }}
               >
                 {/* ── DESKTOP: 2-column alternating grid ── */}

@@ -1,6 +1,4 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const STATS = [
   { number: '120+', label: 'Projects Delivered', description: 'Across web, mobile, and digital solutions' },
@@ -10,19 +8,33 @@ const STATS = [
 ]
 
 const LOGOS = [
-  'TechCorp', 'FinanceHub', 'E-Shop Pro', 'CloudSync', 'DataViz', 'StartupX',
-  'EnterpriseCo', 'DesignStudio', 'BuildKit', 'ScaleUp'
+  'Fintech', 'SaaS Platforms', 'E-Commerce', 'B2B Services', 'Enterprise', 'Scale-Ups',
+  'HealthTech', 'Agencies', 'Product Studios', 'Logistics'
 ]
 
 export function SocialProof() {
   const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setIsVisible(true)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="py-32 bg-foreground text-background border-t border-foreground">
+    <section ref={containerRef} className="py-32 bg-foreground text-background border-t border-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
