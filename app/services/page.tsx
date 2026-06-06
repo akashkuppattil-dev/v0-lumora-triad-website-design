@@ -135,7 +135,7 @@ const FAQ_ITEMS = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="pt-20 sm:pt-28 lg:pt-48 pb-12 lg:pb-24 px-4 lg:px-8">
+      <div className="pt-40 sm:pt-28 lg:pt-48 pb-12 lg:pb-24 px-4 lg:px-8">
         <div className="max-w-[1400px] mx-auto">
           {/* Header Section */}
           <section className="mb-10 lg:mb-32">

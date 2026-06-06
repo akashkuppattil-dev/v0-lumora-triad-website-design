@@ -25,7 +25,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen flex items-center pt-36 sm:pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}

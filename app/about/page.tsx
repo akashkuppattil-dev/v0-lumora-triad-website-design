@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background pt-20 sm:pt-28 lg:pt-48">
+    <main className="min-h-screen bg-background pt-40 sm:pt-28 lg:pt-48">
       <About />
       {/* Global CTA – consistent with homepage */}
       <section className="py-24 lg:py-48 border-t border-border bg-foreground text-background -mx-6 lg:-mx-8 px-6 lg:px-8">

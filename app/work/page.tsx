@@ -29,7 +29,7 @@ const CASE_STUDIES = [
 
 export default function WorkPage() {
   return (
-    <section className="min-h-screen bg-background pt-20 sm:pt-28 lg:pt-32 pb-16">
+    <section className="min-h-screen bg-background pt-40 sm:pt-28 lg:pt-32 pb-16">
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         <h1 className="text-5xl font-bold text-center mb-12 text-foreground">
           Our Work

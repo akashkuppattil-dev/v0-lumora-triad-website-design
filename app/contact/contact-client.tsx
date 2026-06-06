@@ -68,7 +68,7 @@ export default function ContactClient() {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-44 pb-16 sm:pb-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-32 lg:pt-44 pb-16 sm:pb-20">
 
         {/* ── Hero ── */}
         <div className="mb-10 sm:mb-12">

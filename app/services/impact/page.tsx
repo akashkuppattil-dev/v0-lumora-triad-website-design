@@ -84,7 +84,7 @@ export default function ImpactPage() {
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 border-b border-border">
+      <section className="relative min-h-screen flex items-center pt-36 sm:pt-24 pb-20 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">

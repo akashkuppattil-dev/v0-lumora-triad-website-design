@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function Hero() {
   return (
-    <section className="relative bg-background overflow-hidden pt-32 sm:pt-36 lg:pt-44 pb-24 px-4 sm:px-8 lg:px-12">
+    <section className="relative bg-background overflow-hidden pt-44 sm:pt-36 lg:pt-44 pb-24 px-4 sm:px-8 lg:px-12">
       {/* Technical Grid Overlay (UI/UX architectural layout) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 

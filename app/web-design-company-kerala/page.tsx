@@ -162,7 +162,7 @@ export default function KeralaLandingPage() {
 
       <main className="min-h-screen bg-background text-foreground">
         {/* ─── Hero ─────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden pt-24 sm:pt-32 lg:pt-44 pb-24 px-4 sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden pt-36 sm:pt-32 lg:pt-44 pb-24 px-4 sm:px-6 lg:px-8">
           {/* Gradient blobs */}
           <div
             aria-hidden
