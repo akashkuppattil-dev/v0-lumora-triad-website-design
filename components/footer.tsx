@@ -21,13 +21,14 @@ export function Footer() {
                   src="/company-logo.png"
                   alt="Lumora Triad"
                   fill
+                  sizes="40px"
                   className="object-cover rounded-full"
                 />
               </div>
               <Brand className="text-background" />
             </Link>
             <p className="text-xs sm:text-sm text-background/60 font-medium leading-relaxed mb-8">
-              Designing and building modern web systems for growing businesses.
+              Designing and building modern digital products for growing brands.
             </p>
             <div className="space-y-1">
               <p className="text-[10px] uppercase tracking-widest text-background/40 font-black">Studio</p>
@@ -67,27 +68,27 @@ export function Footer() {
             <ul className="grid grid-cols-1 gap-4">
               <li>
                 <Link href="/services/web-development" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Web & Next.js
+                  Web Design & Development
                 </Link>
               </li>
               <li>
                 <Link href="/services/ui-ux-design" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Digital Design
+                  UI/UX Design
                 </Link>
               </li>
               <li>
                 <Link href="/services/branding-seo-growth" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Branding & SEO
+                  Branding, SEO & Growth
                 </Link>
               </li>
               <li>
                 <Link href="/services/ecommerce" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  E-commerce
+                  E-Commerce Solutions
                 </Link>
               </li>
               <li>
                 <Link href="/services/maintenance" className="text-sm font-semibold text-background/60 hover:text-background transition-all">
-                  Maintenance
+                  Maintenance & Support
                 </Link>
               </li>
             </ul>

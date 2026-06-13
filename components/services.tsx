@@ -64,7 +64,7 @@ export function Services() {
   }, [])
 
   return (
-    <section id="services" className="py-12 lg:py-32 px-4 lg:px-8 bg-transparent border-t border-white/10">
+    <section id="services" className="py-12 lg:py-16 px-4 lg:px-8 bg-transparent border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
@@ -77,11 +77,11 @@ export function Services() {
               <div className="flex items-center gap-4 mb-4 lg:mb-8">
                 <div className="w-12 h-px bg-foreground" />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground opacity-60">
-                  What we do
+                  What We Do
                 </span>
               </div>
               <h2 className="text-4xl sm:text-6xl lg:text-8xl font-black leading-[0.85] tracking-tighter uppercase mb-3">
-                Services we provide.
+                Services We Provide
               </h2>
             </div>
             <Link
@@ -93,7 +93,7 @@ export function Services() {
           </div>
 
           {/* Services List */}
-          <div className="divide-y divide-border lg:divide-y-0 lg:space-y-64">
+          <div className="divide-y divide-border lg:divide-y-0 lg:space-y-32">
             {SERVICES.map((service, index) => (
               <div
                 key={service.title}
@@ -150,7 +150,7 @@ export function Services() {
                         fill
                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        loading="lazy"
+                        priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
@@ -182,7 +182,7 @@ export function Services() {
                         fill
                         className="object-cover transition-transform duration-1000 group-hover:scale-105"
                         sizes="(max-width: 1024px) calc(100vw - 32px), 0px"
-                        loading="lazy"
+                        priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>

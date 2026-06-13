@@ -24,7 +24,7 @@ export function CTASection() {
   }, [])
 
   return (
-    <section className="py-32 px-6 lg:px-8 bg-foreground text-background">
+    <section className="py-16 lg:py-20 px-6 lg:px-8 bg-foreground text-background">
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
@@ -32,13 +32,13 @@ export function CTASection() {
             }`}
         >
           <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 max-w-4xl mx-auto text-balance tracking-tighter">
-            Have a project in mind? Let&apos;s talk.
+            Have a Project in Mind? Let&apos;s Talk.
           </h2>
 
           <p className="text-lg lg:text-xl text-background/70 font-light mb-6 max-w-2xl mx-auto leading-relaxed">
             We work with a focused number of clients at a time — which means you get real attention, clear communication, and work that ships.
           </p>
-          <p className="text-sm text-background/50 font-medium mb-14">
+          <p className="text-sm text-background/50 font-medium mb-8">
             Now accepting new projects for Q3 2026.
           </p>
 

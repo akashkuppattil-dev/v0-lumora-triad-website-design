@@ -84,7 +84,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary border-y border-border">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-8 text-balance">
-            Why it matters
+            Why It Matters
           </h2>
           <p className="text-lg text-muted-foreground font-normal leading-relaxed">
             {service.whyMatters}
@@ -96,7 +96,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            What you get
+            What You Get
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.benefits.map((benefit, index) => (
@@ -118,7 +118,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary border-y border-border">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            Our approach
+            Our Approach
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {service.process.map((item, index) => (
@@ -138,7 +138,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-foreground text-background rounded-2xl mx-4 sm:mx-6 lg:mx-8 mb-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-6">
-            Ready to transform your {service.title.toLowerCase()}?
+            Ready to Transform Your {service.title}?
           </h2>
           <p className="text-lg font-normal opacity-90 mb-8 leading-relaxed">
             Let's discuss how we can help you achieve your goals.
@@ -157,7 +157,7 @@ export function ServiceDetailClient({ slug, service, allServices }: ServiceProps
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            Other services
+            Other Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {Object.entries(allServices)

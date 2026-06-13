@@ -66,12 +66,12 @@ export function Testimonials() {
           <div className="flex items-center gap-4 mb-16">
             <div className="w-12 h-px bg-foreground" />
             <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Social Proof
+              Testimonials
             </span>
           </div>
 
-          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance">
-            Trusted by ambitious brands
+          <h2 className="text-6xl lg:text-7xl font-bold mb-20 text-balance text-foreground">
+            Trusted by Ambitious Brands
           </h2>
 
           {/* Testimonial Display */}

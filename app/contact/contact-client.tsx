@@ -13,10 +13,10 @@ const SERVICE_OPTIONS = [
 ]
 
 const SOCIAL_LINKS = [
-  { label: 'Twitter', cta: 'Follow X →', href: 'https://twitter.com/lumoratriad' },
-  { label: 'LinkedIn', cta: 'Connect →', href: 'https://linkedin.com/company/lumoratriad' },
-  { label: 'Instagram', cta: 'Stories →', href: 'https://instagram.com/lumoratriad' },
-  { label: 'Facebook', cta: 'Update →', href: 'https://facebook.com/lumoratriad' },
+  { label: 'Twitter', cta: 'Follow X →', href: 'https://x.com/LumoraTriad' },
+  { label: 'LinkedIn', cta: 'Connect →', href: 'https://www.linkedin.com/in/lumoratriad/' },
+  { label: 'Instagram', cta: 'Stories →', href: 'https://www.instagram.com/lumo.ratraid/?hl=en' },
+  { label: 'Facebook', cta: 'Update →', href: 'https://www.facebook.com/profile.php?id=61586286665509' },
 ]
 
 const PHONE_NUMBERS = [

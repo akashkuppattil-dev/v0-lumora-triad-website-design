@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-export function About() {
+export function About({ showBorder = true, className = '' }: { showBorder?: boolean; className?: string } = {}) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef(null)
 
@@ -24,7 +24,7 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="py-12 lg:py-24 px-4 lg:px-8 bg-transparent border-t border-white/10">
+    <section id="about" className={`py-12 lg:py-16 px-4 lg:px-8 bg-transparent ${showBorder ? 'border-t border-white/10' : ''} ${className}`}>
       <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
@@ -42,16 +42,16 @@ export function About() {
           {/* Main Statement */}
           <div className="mb-8 lg:mb-20">
             <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.9] max-w-4xl mb-8 lg:mb-16 text-balance tracking-tighter">
-              A premium web & product studio. Small team, sharp execution.
+              A premium web and product studio. Small team, sharp execution.
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
               <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
-                Lumora Triad is a focused web and design studio based in India, working with early-stage startups, growing brands, and local businesses that need a credible online presence built properly — not templated.
+                Lumora Triad is a premium web and product design studio based in India. We partner with early-stage startups, growing brands, and established businesses to build credible, custom online experiences—never templated.
               </p>
               <div className="space-y-8">
                 <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed max-w-lg">
-                  We handle every layer — from UI design and frontend engineering to custom backends and API integrations. One team, end-to-end ownership, and real communication throughout.
+                  We manage every layer of the product lifecycle—from UI/UX design and frontend engineering to custom backends and API integrations. One cohesive team, end-to-end ownership, and transparent communication.
                 </p>
               </div>
             </div>

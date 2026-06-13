@@ -29,8 +29,8 @@ export function FAQSection({ items }: FAQProps) {
           </span>
         </div>
 
-        <h2 className="text-4xl sm:text-6xl font-bold mb-16 tracking-tighter uppercase">
-          Answers to your inquiries.
+        <h2 className="text-4xl sm:text-6xl font-bold mb-16 tracking-tighter uppercase text-foreground">
+          Answers to Your Inquiries
         </h2>
 
         <div className="divide-y divide-border border-y border-border">

@@ -12,13 +12,13 @@ export function Hero() {
       <h1 className="sr-only">Lumora Triad — Premium Web &amp; Product Studio</h1>
 
       {/* Floating 3D Ambient Orbs (Pinterest-inspired light refractions) */}
-      <div className="absolute right-[-10%] top-[-5%] w-[500px] h-[500px] rounded-full bg-white/15 blur-3xl pointer-events-none" />
-      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-[-10%] top-[-5%] w-[500px] h-[500px] rounded-full bg-sky-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] rounded-full bg-blue-600/8 blur-3xl pointer-events-none" />
 
       {/* Glossy 3D Glassmorphic Objects */}
-      <div className="absolute right-[8%] bottom-[25%] w-36 h-36 rounded-3xl border border-white/35 bg-gradient-to-tr from-white/20 to-white/5 backdrop-blur-md shadow-2xl rotate-12 hover:rotate-45 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
-      <div className="absolute right-[22%] top-[20%] w-20 h-20 rounded-full border border-white/45 bg-gradient-to-tr from-white/30 to-white/10 backdrop-blur-xl shadow-xl -rotate-12 hover:rotate-12 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
-      <div className="absolute left-[8%] top-[35%] w-16 h-16 rounded-xl border border-white/25 bg-gradient-to-tr from-white/25 to-white/5 backdrop-blur-sm shadow-md rotate-45 pointer-events-none hidden lg:block" />
+      <div className="absolute right-[8%] bottom-[25%] w-36 h-36 rounded-3xl border border-sky-400/40 bg-gradient-to-tr from-sky-400/20 via-blue-500/10 to-sky-300/5 backdrop-blur-md shadow-[0_0_40px_rgba(56,189,248,0.2)] rotate-12 hover:rotate-45 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
+      <div className="absolute right-[22%] top-[20%] w-20 h-20 rounded-full border border-blue-400/40 bg-gradient-to-tr from-blue-400/20 via-sky-400/10 to-indigo-300/5 backdrop-blur-xl shadow-[0_0_30px_rgba(37,99,235,0.15)] -rotate-12 hover:rotate-12 transition-transform duration-[1500ms] pointer-events-none hidden lg:block" />
+      <div className="absolute left-[8%] top-[35%] w-16 h-16 rounded-xl border border-sky-400/30 bg-gradient-to-tr from-sky-400/15 via-blue-400/10 to-transparent backdrop-blur-sm shadow-[0_0_25px_rgba(56,189,248,0.15)] rotate-45 pointer-events-none hidden lg:block" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12 lg:gap-8">
         {/* Headline */}
@@ -48,7 +48,7 @@ export function Hero() {
               aria-label="Explore Services"
               className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-4 text-foreground font-semibold border border-foreground/20 rounded-full hover:bg-foreground/5 transition-all duration-300 text-sm sm:text-base group whitespace-nowrap"
             >
-              Explore services
+              Explore Services
               <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>

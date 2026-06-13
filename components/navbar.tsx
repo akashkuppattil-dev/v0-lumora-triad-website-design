@@ -8,8 +8,8 @@ import { Brand } from './brand'
 const SOCIAL_LINKS = [
   {
     name: 'X',
-    handle: '@LumoraTraid',
-    href: 'https://x.com/LumoraTraid',
+    handle: '@LumoraTriad',
+    href: 'https://x.com/LumoraTriad',
     bg: '#000000',
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
@@ -137,14 +137,14 @@ export function Navbar() {
 
             {/* Desktop CTA */}
             <Link href="/contact" className="hidden md:inline-flex text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 rounded-full bg-foreground text-background hover:opacity-80 transition-all duration-500 group items-center gap-3">
-              Start Project
+              Start a Project
               <span className="group-hover:translate-x-1 transition-transform duration-500">→</span>
             </Link>
 
             {/* Mobile — CTA + Hamburger */}
             <div className="md:hidden flex items-center gap-3 z-[110] relative">
               <Link href="/contact" onClick={() => setIsOpen(false)} className="text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full bg-foreground text-background whitespace-nowrap">
-                Start Project
+                ↗
               </Link>
               <button
                 className="p-2 text-foreground"
@@ -227,8 +227,14 @@ export function Navbar() {
             <a href="mailto:lumoratriad@gmail.com" className="block text-base font-bold text-foreground hover:opacity-60 transition-opacity mb-1">
               lumoratriad@gmail.com
             </a>
-            <a href="tel:+919947878418" className="block text-sm text-muted-foreground hover:opacity-60 transition-opacity">
+            <a href="tel:+919947878418" className="block text-sm text-foreground hover:opacity-60 transition-opacity">
               +91 99478 78418
+            </a>
+            <a href="tel:+919484739125" className="block text-sm text-foreground hover:opacity-60 transition-opacity">
+              +91 98474 39125 (Main)
+            </a>
+            <a href="tel:+971555973832" className="block text-sm text-foreground hover:opacity-60 transition-opacity">
+              +971 55 597 3832 (UAE)
             </a>
           </div>
         </div>

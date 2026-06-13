@@ -7,7 +7,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
-  allowedDevOrigins: ['192.168.1.2'],
+  allowedDevOrigins: ['192.168.1.6', 'localhost'],
   async headers() {
     return [
       {
@@ -28,12 +28,12 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
-      {
+      ...(process.env.NODE_ENV === 'production' ? [{
         source: '/_next/static/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
-      },
+      }] : []),
     ]
   },
 }

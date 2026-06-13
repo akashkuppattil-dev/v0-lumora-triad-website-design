@@ -183,11 +183,10 @@ export default function ServicesPage() {
                         src={service.image}
                         alt={service.alt}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                        className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         sizes="(max-width: 1024px) 0px, 33vw"
-                        loading="lazy"
+                        priority={index === 0}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
                     <div className={`${pattern === 1 ? 'lg:order-3' :
                         pattern === 2 ? 'lg:order-1' : 'lg:order-3'
@@ -221,9 +220,8 @@ export default function ServicesPage() {
                         fill
                         className="object-cover"
                         sizes="(max-width: 1024px) calc(100vw - 32px), 0px"
-                        loading="lazy"
+                        priority={index === 0}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
 
                     <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>

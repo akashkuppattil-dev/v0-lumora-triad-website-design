@@ -79,14 +79,14 @@ const SERVICES = [
     icon: '⚡',
     title: 'Web Design & Development',
     description:
-      'Fast, modern websites built on Next.js & React. Responsive by default, optimised for Core Web Vitals, and designed to convert.',
+      'Fast, modern websites built on Next.js & React. Responsive by default, optimized for Core Web Vitals, and designed to convert.',
     href: '/services/web-development',
   },
   {
     icon: '🎨',
     title: 'UI/UX Design',
     description:
-      'User-centred interfaces crafted in Figma and delivered pixel-perfect. We obsess over interactions so your users stay longer.',
+      'User-centered interfaces crafted in Figma and delivered pixel-perfect. We obsess over interactions so your users stay longer.',
     href: '/services/ui-ux-design',
   },
   {
@@ -148,7 +148,7 @@ const FAQS = [
   },
   {
     q: 'Do you offer SEO services for Kerala businesses?',
-    a: 'Yes. We offer technical SEO, local SEO (Google Business Profile optimisation), and content strategy tailored for Kerala-based businesses looking to rank for regional and national keywords.',
+    a: 'Yes. We offer technical SEO, local SEO (Google Business Profile optimization), and content strategy tailored for Kerala-based businesses looking to rank for regional and national keywords.',
   },
 ]
 
@@ -219,11 +219,11 @@ export default function KeralaLandingPage() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-4">
-                  Why Lumora Triad
+                  Why Lumora Triad?
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-black leading-tight mb-6">
-                  A Kerala studio that{' '}
-                  <span className="italic font-light">actually ships</span>
+                <h2 className="text-3xl sm:text-4xl font-black leading-tight mb-6 text-foreground">
+                  A Kerala-Based Studio That{' '}
+                  <span className="italic font-light">Actually Ships</span>
                 </h2>
                 <p className="text-foreground/60 leading-relaxed mb-6">
                   Most web agencies in Kerala hand you a WordPress template and call it a day.
@@ -259,7 +259,7 @@ export default function KeralaLandingPage() {
                   {
                     icon: '📍',
                     title: 'Kerala-Rooted, Globally Minded',
-                    desc: 'We understand the Kerala market — from local consumer behaviour to Malayalam SEO considerations — while delivering global-quality design.',
+                    desc: 'We understand the Kerala market — from local consumer behavior to Malayalam SEO considerations — while delivering global-quality design.',
                   },
                   {
                     icon: '💬',
@@ -295,7 +295,7 @@ export default function KeralaLandingPage() {
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-4">
                 What We Do
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black leading-tight text-foreground">
                 Services for Kerala Businesses
               </h2>
             </div>
@@ -328,8 +328,8 @@ export default function KeralaLandingPage() {
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-3">
                 Coverage
               </p>
-              <h2 className="text-2xl sm:text-3xl font-black">
-                Serving All Major Cities Across Kerala
+              <h2 className="text-2xl sm:text-3xl font-black text-foreground">
+                Serving Major Cities Across Kerala
               </h2>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
@@ -355,8 +355,8 @@ export default function KeralaLandingPage() {
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-4">
                 FAQ
               </p>
-              <h2 className="text-3xl sm:text-4xl font-black leading-tight">
-                Questions from Kerala Clients
+              <h2 className="text-3xl sm:text-4xl font-black leading-tight text-foreground">
+                Frequently Asked Questions
               </h2>
             </div>
 
@@ -387,11 +387,11 @@ export default function KeralaLandingPage() {
             <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 mb-6">
               Ready to Start?
             </p>
-            <h2 className="text-3xl sm:text-5xl font-black leading-tight mb-6">
-              Let&apos;s build your Kerala
+            <h2 className="text-3xl sm:text-5xl font-black leading-tight mb-6 text-foreground">
+              Let&apos;s Build Your Brand
               <br />
               <span className="bg-gradient-to-r from-violet-500 via-indigo-500 to-cyan-400 bg-clip-text text-transparent">
-                brand online.
+                in Kerala
               </span>
             </h2>
             <p className="text-lg text-foreground/55 max-w-xl mx-auto mb-10 leading-relaxed">

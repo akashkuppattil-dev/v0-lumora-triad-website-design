@@ -87,8 +87,8 @@ export default function ImpactPage() {
       <section className="relative min-h-screen flex items-center pt-36 sm:pt-24 pb-20 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance">
-              Real results, measurable impact
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-balance text-foreground">
+              Real Results, Measurable Impact
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground font-normal max-w-3xl mx-auto leading-relaxed">
               We don't just build beautiful products. We deliver measurable business outcomes that drive growth and competitive advantage.
@@ -125,8 +125,8 @@ export default function ImpactPage() {
       {/* Industry Breakdown */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary border-y border-border">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            Industries served
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance text-foreground">
+            Industries Served
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -148,7 +148,7 @@ export default function ImpactPage() {
             </div>
             <div className="flex items-center">
               <div>
-                <h3 className="text-3xl font-semibold mb-4">Diverse expertise</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-foreground">Diverse Expertise</h3>
                 <p className="text-muted-foreground font-normal leading-relaxed mb-6">
                   Our experience spans multiple industries, giving us unique insights into different market dynamics, user behaviors, and business models.
                 </p>
@@ -164,8 +164,8 @@ export default function ImpactPage() {
       {/* Success Metrics by Category */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance">
-            Success metrics by service
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-16 text-balance text-foreground">
+            Success Metrics by Service
           </h2>
           <div className="grid lg:grid-cols-2 gap-8">
             {SUCCESS_METRICS.map((section, index) => (
